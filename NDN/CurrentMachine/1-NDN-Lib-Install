@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Install NDN Lib Dependencies
+sudo apt install -y g++ pkg-config python3-minimal libboost-all-dev libssl-dev libsqlite3-dev libpcap-dev
+
+# Download the ndn-cxx lib
+git clone https://github.com/named-data/ndn-cxx.git
+
+# Configure and install NDN Lib
+cd ndn-cxx
+./waf configure --with-examples
+./waf
+sudo ./waf install
+sudo ldconfig  #on Linux only

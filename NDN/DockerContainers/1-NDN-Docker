@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Intstall initial tools for a new docker container
+apt-get update
+apt-get install -y git build-essential
+
+# Install NDN Lib Dependencies
+apt-get install -y g++ pkg-config python3-minimal libboost-all-dev libssl-dev libsqlite3-dev libpcap-dev
+
+# Download the ndn-cxx lib
+git clone https://github.com/named-data/ndn-cxx.git
+git checkout master
+
+# Configure and install NDN Lib
+cd ndn-cxx
+./waf configure --with-examples
+./waf
+./waf install
+ldconfig  #on Linux only
