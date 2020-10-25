@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Prerequisite: Setup-Docker-Repository
+
+# Based on the instructions at https://docs.docker.com/engine/install/ubuntu/
+# Author: Braeden Diaz
+# Date: 9/2020
+
+# Update the apt package index
+sudo apt-get update
+
+# Install the latest version of Docker Engine and containerd
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+
+# Verify that Docker Engine is installed correctly by running the hello-world image
+sudo docker run hello-world

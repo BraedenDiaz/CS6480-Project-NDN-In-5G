@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Prerequisite: Install-Docker-Engine
+
+# Based on the instructions at https://docs.docker.com/compose/install/
+# Author: Braeden Diaz
+# Date: 9/2020
+
+# Download the current stable release of Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# Apply executable permissions to the binary
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Test the installation
+docker-compose --version
