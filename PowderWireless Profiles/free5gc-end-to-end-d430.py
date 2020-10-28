@@ -39,11 +39,11 @@ request = pc.makeRequestRSpec()
 gNBCoreLink = request.Link("gNBCoreLink")
 
 # Add node which will run gNodeB and UE components with a simulated RAN.
-sim_gnb = request.RawPC("sim-gnb")
-sim_gnb.component_manager_id = GLOBALS.SITE_URN
-sim_gnb.disk_image = GLOBALS.UBUNTU18_IMG
-sim_gnb.hardware_type = GLOBALS.HWTYPE
-gNBCoreLink.addNode(sim_gnb)
+sim_ran = request.RawPC("sim-ran")
+sim_ran.component_manager_id = GLOBALS.SITE_URN
+sim_ran.disk_image = GLOBALS.UBUNTU18_IMG
+sim_ran.hardware_type = GLOBALS.HWTYPE
+gNBCoreLink.addNode(sim_ran)
 
 # Add node that will host the 5G Core Virtual Network Functions (AMF, SMF, UPF, etc).
 free5gc = request.RawPC("free5gc")
