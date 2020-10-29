@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Golang version 1.14.4
+wget https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz
+sudo tar -C /usr/local -zxvf go1.14.4.linux-amd64.tar.gz
+mkdir -p ~/go/{bin,pkg,src}
+# The following assume that your shell is bash (Do these manually!)
+#echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+#echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
+#echo 'export PATH=$PATH:$GOPATH/bin:$GOROOT/bin' >> ~/.bashrc
+#source ~/.bashrc
+
+# Control-plane Supporting Packagaes
+sudo apt -y update
+sudo apt -y install mongodb wget git
+sudo systemctl start mongodb
+
+# User-plane Supporting packages
+sudo apt -y update
+sudo apt -y install git gcc cmake autoconf libtool pkg-config libmnl-dev libyaml-dev
+go get -u github.com/sirupsen/logrus
+
+# Linux Host Network Settings (Do these manually!)
+#sudo sysctl -w net.ipv4.ip_forward=1
+#sudo iptables -t nat -A POSTROUTING -o <dn_interface> -j MASQUERADE
+#sudo systemctl stop ufw

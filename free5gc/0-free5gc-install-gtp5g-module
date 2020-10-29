@@ -1,0 +1,5 @@
+#!/bin/bash
+git clone -b v0.2.0 https://github.com/PrinzOwO/gtp5g.git
+cd gtp5g
+make
+sudo make install

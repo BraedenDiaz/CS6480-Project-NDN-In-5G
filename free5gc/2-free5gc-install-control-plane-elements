@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Clone the free5gc repository
+cd ~
+git clone --recursive -b v3.0.4 -j `nproc` https://github.com/free5gc/free5gc.git
+cd free5gc
+
+# Install all Go module dependencies
+cd ~/free5gc
+go mod download
+
+# Compile all  network function services in free5gc
+cd ~/free5gc
+make all
