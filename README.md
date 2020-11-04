@@ -262,5 +262,6 @@ At this point, you can use the UERANSIM interface to register, deregister, and c
 
 # References
 
+- [PowderWireless Platform](https://powderwireless.net)
 - [free5gc Repository](https://github.com/free5gc/free5gc)
 - [UERANSIM Repository](https://github.com/aligungr/UERANSIM)
