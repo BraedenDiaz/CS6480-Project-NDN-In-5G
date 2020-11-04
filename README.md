@@ -1,5 +1,9 @@
 # CS6480-Project-NDN-In-5G
 
+Project for CS6480 at the University of Utah.
+
+Refer to the references at the bottom for links to the free5gc and UERANSIM repositories if needed.
+
 ## Install free5gc on the `free5gc` node
 
 ### Prerequisites
@@ -259,4 +263,4 @@ At this point, you can use the UERANSIM interface to register, deregister, and c
 # References
 
 - [free5gc Repository](https://github.com/free5gc/free5gc)
-- [UERANSIM Repositoru](https://github.com/aligungr/UERANSIM)
+- [UERANSIM Repository](https://github.com/aligungr/UERANSIM)
