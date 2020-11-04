@@ -250,10 +250,11 @@ chmod 700 run.sh
 
 At this point, you can use the UERANSIM interface to register, deregister, and connect to the data network over the free5gc core. I have yet to figure out how to do other things such as run an application over the UERANSIM or perform other mobile operations. Refer to the next section below.
 
-# In Progress
+# Challeneges
 
-- Working on getting an example application running over the UERANSIM and using the free5gc core.
+- Have yet to get an example application running over the UERANSIM and using the free5gc core.
 - Using the test files provided in free5gc to see how they get N3IWF-based applications working and how they trigger scenraios like handoff, UE simulation, etc.
+- Looking into other configurations in the free5gc core `smfcfg.conf`, `uerouting.yaml`.
 
 # References
 
