@@ -69,12 +69,17 @@ sudo sysctl -w net.ipv4.ip_forward=1
 
 ```bash
 sudo iptables -t nat -A POSTROUTING -o `cat /var/emulab/boot/controlif` -j MASQUERADE
+```
+
+7. Stop firewall service so it doesn't interfere with anything.
+
+```
 sudo systemctl stop ufw
 ```
 
 ### Install free5gc
 
-7. Clone the free5gc repository.
+8. Clone the free5gc repository.
 
 ```bash
 cd ~
@@ -82,21 +87,21 @@ git clone --recursive -b v3.0.4 -j `nproc` https://github.com/free5gc/free5gc.gi
 cd free5gc
 ```
 
-8. Install all free5gc Golang module dependencies.
+9. Install all free5gc Golang module dependencies.
 
 ```bash
 cd ~/free5gc
 go mod download
 ```
 
-9. Compile all free5gc network function services (AMF, SMF, UPF, etc)
+10. Compile all free5gc network function services (AMF, SMF, UPF, etc)
 
 ```bash
 cd ~/free5gc
 make all
 ```
 
-10. Lastly, run the entire free5gc core all-in-one.
+11. Lastly, run the entire free5gc core all-in-one.
 
 ```bash
 cd ~/free5gc
