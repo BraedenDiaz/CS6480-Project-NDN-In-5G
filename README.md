@@ -220,7 +220,7 @@ Password: free5gc
 
 4. Go to the `subscribers` tab and click on `add`.
 
-5. Change the USIM Type to `Op` instad of `OPc`
+5. Change the USIM Type to `Op` instead of `OPc`
 
 ```
 USIM Type: OPc
