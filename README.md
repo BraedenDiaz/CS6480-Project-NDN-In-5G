@@ -140,7 +140,7 @@ chmod 700 build.sh
 
 ## Configure free5gc
 
-1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of your machine `10.10.1.1`.
+1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of the free5gc machine `10.10.1.1` in my case.
 
 ```yaml
 configuration:
@@ -167,7 +167,7 @@ configuration:
 selected-profile: 'free5gc'
 ```
 
-2. In the file `UERANSIM/config/free5gc/gnb.yaml`under the `amfConfigs` section, change the host and port to the host and port of your free5gc node (where the AMF is located).
+2. In the file `UERANSIM/config/free5gc/gnb.yaml`under the `amfConfigs` section, change the host and port values to the host and port of the free5gc node (where the AMF is located).
 
 ```yaml
 amfConfigs:
