@@ -248,6 +248,8 @@ Note: You may have to make `run.sh` executable.
 chmod 700 run.sh
 ```
 
+At this point, you can use the UERANSIM interface to register, deregister, and connect to the data network over the free5gc core. I have yet to figure out how to do other things such as run an application over the UERANSIM or perform other mobile operations. Refer to the next section below.
+
 # In Progress
 
 - Working on getting an example application running over the UERANSIM and using the free5gc core.
