@@ -4,8 +4,6 @@ Project for CS6480 at the University of Utah.
 
 Refer to the references at the bottom for links to the free5gc and UERANSIM repositories if needed.
 
-## Install free5gc on the `free5gc` node
-
 ### Prerequisites
 
 0. Spin up a PowderWireless node using a linux profile with the kernel version 5.0.0-23-generic.
@@ -18,6 +16,8 @@ For the following instructions, I am using my [end-to-end](/PowderWireless%20Pro
 
 - `free5gc` node which will contain free5gc.
 - `sim-ran` node which will contain UERANSIM.
+
+## Install free5gc on the `free5gc` node
 
 1. Install gtp5g Linux module
 
@@ -127,12 +127,14 @@ sudo apt install libsctp-dev lksctp-tools
 2. Set the `JAVA_HOME` environment variable.
 
 ```bash
-export JAVA_HOME=<path to the jdk 11 just installed>
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ```
 
-3. Build UERANSIM.
+3. Clone and Build UERANSIM.
 
 ```bash
+cd ~
+git clone https://github.com/aligungr/UERANSIM.git
 cd ~/UERANSIM
 ./build.sh
 ```
@@ -145,13 +147,13 @@ chmod 700 build.sh
 
 ## Configure free5gc
 
-1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of the free5gc machine `10.10.1.1` in my case.
+1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of the free5gc machine `10.10.1.2` in my case.
 
 ```yaml
 configuration:
   amfName: AMF
   ngapIpList:
-    - 10.10.1.1
+    - 10.10.1.2
 ```
 
 2. Still in `amfcfg.conf`, next change the port number under the `sbi` section to the port number UERANSIM uses `38412`
@@ -185,7 +187,7 @@ amfConfigs:
         hex: '5580'
       amfPointer:
         hex: 'a8'
-    host: 10.10.1.1 # Chnage this
+    host: 10.10.1.2
     port: 38412
 ```
 NOTE: Use the default port number as shown in the `gnb.yaml` file which should be 38412 as when I changed it, it wouldn't connect to the free5gc core even when I also changed the port number in the AMF configuration as well, so just leave this as port 38412 and only change the AMF port so that it is 38412.
