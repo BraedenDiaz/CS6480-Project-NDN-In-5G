@@ -1,0 +1,22 @@
+info:
+  version: 1.0.0
+  description: Routing information for UE
+
+ueRoutingInfo:
+  - SUPI: imsi-208930000000003
+    AN: 10.10.1.1
+    PathList:
+      - DestinationIP: 60.60.0.101
+        UPF: !!seq
+          - UPF
+
+routeProfile:
+  MEC1:
+    forwardingPolicyID: 10
+
+pfdDataForApp:
+  - applicationId: edge
+    pfds:
+      - pfdID: pfd1
+        flowDescriptions:
+          - permit out ip from 60.60.0.1 8080 to any
