@@ -1,0 +1,39 @@
+gnbId: 1
+tac: 1
+nci: '000000000000000000000000000000010000'
+
+host: 10.10.1.1
+gtpPort: 2152
+
+gnbPlmn:
+  mcc: 208
+  mnc: 93
+
+amfConfigs:
+  - guami:
+      mcc: 208
+      mnc: 93
+      amfRegionId:
+        hex: '2a'
+      amfSetId:
+        hex: '5580'
+      amfPointer:
+        hex: 'a8'
+    host: 10.10.1.2
+    port: 38412
+
+supportedTAs:
+  - tac:
+      hex: '000001'
+    broadcastPlmns:
+      - plmn:
+          mcc: 208
+          mnc: 93
+        taiSliceSupportNssais:
+          - sst:
+              value: 1
+            sd:
+              value:
+                hex: '010203'
+
+ignoreStreamIds: true
