@@ -20,7 +20,9 @@ For the following instructions, I am using a setup containing the following five
 - `upf1` node which acts as a UPF anchor.
 - `upf2` node which acts as another UPF anchor.
 
-## Install free5gc on the `free5gc` nodes and all 3 `UPF` nodes
+## Install free5gc on the `free5gc` node and on all 3 `UPF` nodes
+
+Unless stated otherwise, perform the commands in this section for the `free5gc` node and all 3 `UPF` nodes.
 
 1. Install gtp5g Linux module
 
@@ -45,7 +47,7 @@ source ~/.bashrc
 ```
 ### Install free5gc Dependencies
 
-3. Install Control-Plane Supporting Packagaes. Optional for the UPF nodes.
+3. Install Control-Plane Supporting Packagaes. Not required for the UPF nodes.
 
 ```bash
 sudo apt -y update
@@ -88,7 +90,6 @@ sudo systemctl stop ufw
 ```bash
 cd ~
 git clone --recursive -b v3.0.4 -j `nproc` https://github.com/free5gc/free5gc.git
-cd free5gc
 ```
 
 9. Install all free5gc Golang module dependencies.
@@ -102,7 +103,6 @@ go mod download
 
 `free5gc` node:
 ```bash
-cd ~/free5gc
 make all
 ```
 
@@ -112,7 +112,7 @@ cd ~/free5gc
 make upf
 ```
 
-If you accidentially compiled all functions on the UPF nodes, that;s fine as you are just going to run the UPF funtion on those nodes.
+If you accidentially compiled all functions on the UPF nodes, that's fine as you can just run the UPF funtion on those nodes by itself.
 
 11. Lastly, you can test free5gc by running the UPF function on the UPF nodes and then running the entire free5gc core all-in-one.
 
