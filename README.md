@@ -8,7 +8,7 @@ Refer to the references at the bottom for links to the free5gc and UERANSIM repo
 
 0. Spin up a PowderWireless node using a linux profile with the kernel version 5.0.0-23-generic.
 
-Note: You can also set up two connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well. Please refer to my example profiles linked below.
+Note: You can also set up multiple connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well. Please refer to my example profiles linked below.
 
 [My Example PowderWireless Profiles](/PowderWireless%20Profiles)
 
