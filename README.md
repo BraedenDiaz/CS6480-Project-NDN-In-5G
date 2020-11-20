@@ -12,12 +12,15 @@ Note: You can also set up two connected nodes if you plan on using an external R
 
 [My Example PowderWireless Profiles](/PowderWireless%20Profiles)
 
-For the following instructions, I am using my [end-to-end](/PowderWireless%20Profiles/free5gc-end-to-end-d430.py) profile containing the following two nodes.
+For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki] (https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
 
 - `free5gc` node which will contain free5gc.
 - `sim-ran` node which will contain UERANSIM.
+- `upfb` node which acts as a UPF branching point.
+- `upf1` node which acts as a UPF anchor.
+- `upf2` node which acts as another UPF anchor.
 
-## Install free5gc on the `free5gc` node
+## Install free5gc on the `free5gc` nodes and all 3 `UPF` nodes
 
 1. Install gtp5g Linux module
 
@@ -42,7 +45,7 @@ source ~/.bashrc
 ```
 ### Install free5gc Dependencies
 
-3. Install Control-Plane Supporting Packagaes
+3. Install Control-Plane Supporting Packagaes. Optional for the UPF nodes.
 
 ```bash
 sudo apt -y update
@@ -63,6 +66,7 @@ go get -u github.com/sirupsen/logrus
 
 ```bash
 sudo sysctl -w net.ipv4.ip_forward=1
+sudo iptables -A FORWARD -j ACCEPT
 ```
 
 6. Configure NAT to allow UEs connected to access the Internet. The file /var/emulab/boot/controlif contains the name of the internet-facing "control network" device.
@@ -94,15 +98,31 @@ cd ~/free5gc
 go mod download
 ```
 
-10. Compile all free5gc network function services (AMF, SMF, UPF, etc)
+10. Compile free5gc network function services (AMF, SMF, etc)
 
+`free5gc` node:
 ```bash
 cd ~/free5gc
 make all
 ```
 
-11. Lastly, run the entire free5gc core all-in-one.
+On all 3 `UPF` nodes:
+```bash
+cd ~/free5gc
+make upf
+```
 
+If you accidentially compiled all functions on the UPF nodes, that;s fine as you are just going to run the UPF funtion on those nodes.
+
+11. Lastly, you can test free5gc by running the UPF function on the UPF nodes and then running the entire free5gc core all-in-one.
+
+On all 3 `UPF` nodes:
+```bash
+cd ~/free5gc/src/upf/build
+sudo -E ./bin/free5gc-upfd
+```
+
+`free5gc` node:
 ```bash
 cd ~/free5gc
 ./run.sh
@@ -130,19 +150,23 @@ sudo apt install libsctp-dev lksctp-tools
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ```
 
-3. Clone and Build UERANSIM.
+3. Clone UERANSIM.
 
 ```bash
 cd ~
 git clone https://github.com/aligungr/UERANSIM.git
-cd ~/UERANSIM
-./build.sh
 ```
 
-Note: You may have to make `build.sh` executable.
+4. Make the UERANSIM scripts executable
 
 ```bash
-chmod 700 build.sh
+cd ~/UERANSIM
+chmod 700 build.sh run.sh
+```
+
+5. Build UERANSIM
+```bash
+./build.sh
 ```
 
 ## Configure free5gc
@@ -156,14 +180,84 @@ configuration:
     - 10.10.1.2
 ```
 
-2. Still in `amfcfg.conf`, next change the port number under the `sbi` section to the port number UERANSIM uses `38412`
+2. In `smfcfg.conf`, set the user plane information base don your setup. I'm using example 2 provided in the [free5gc wiki](https://github.com/free5gc/free5gc/wiki/SMF-Config)
+```yaml
+  pfcp:
+    addr: s10.10.1.2
+  userplane_information:
+    up_nodes:
+      gNB1:
+        type: AN
+        an_ip: 10.10.1.1
+      BranchingUPF:
+        type: UPF
+        node_id: 10.10.1.3
+      AnchorUPF1:
+        type: UPF
+        node_id: 10.10.1.4
+      AnchorUPF2:
+        type: UPF
+        node_id: 10.10.1.5
+    links:
+      - A: gNB1
+        B: BranchingUPF
+      - A: BranchingUPF
+        B: AnchorUPF1
+      - A: BranchingUPF
+        B: AnchorUPF2
+```
+
+3. Still in `smfcfg.conf`, add `ulcl: true` at the very bottom.
 
 ```yaml
-  sbi:
-    scheme: http
-    registerIPv4: 127.0.0.1 # IP used to register to NRF
-    bindingIPv4: 127.0.0.1  # IP used to bind the service
-    port: 38412
+  nrfUri: http://nrf.free5gc.org:29510
+  ulcl: true
+```
+
+4. Configure the `upfcfg.conf` for each UPF you have. In my case, I have a UPF branching point with two UPF anchors, so my config would be the following.
+
+Branching UPF `upfcfg.conf`:
+```yaml
+  pfcp:
+    - addr: 10.10.1.3
+
+  gtpu:
+    - addr: 10.10.1.3
+```
+
+Anchor UPF 1 `upfcfg.conf`:
+```yaml
+  pfcp:
+    - addr: 10.10.1.4
+
+  gtpu:
+    - addr: 10.10.1.4
+```
+
+Anchor UPF 2 `upfcfg.conf`:
+```yaml
+  pfcp:
+    - addr: 10.10.1.5
+
+  gtpu:
+    - addr: 10.10.1.5
+```
+
+5. Finally, configure `uerouting.yaml`. There are already existing UEs, but I add the followng one using the default SUPI that matches the default one added in the free5gc web console when you add a new subscriber.
+
+```yaml
+  - SUPI: imsi-2089300007487
+    AN: 10.200.200.101
+    PathList:
+      - DestinationIP: 60.60.0.101
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF1
+
+      - DestinationIP: 60.60.0.103
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF2
 ```
 
 ## Configure UERANSIM
@@ -174,7 +268,13 @@ configuration:
 selected-profile: 'free5gc'
 ```
 
-2. In the file `UERANSIM/config/free5gc/gnb.yaml`under the `amfConfigs` section, change the host and port values to the host and port of the free5gc node (where the AMF is located).
+2. In the file `UERANSIM/config/free5gc/gnb.yaml`, If you're running UERANSIM on another machine, change the `host: 127.0.0.1` to IP address of the interface on the same networ as the free5gc core.
+
+```yaml
+host: 10.10.1.1
+```
+
+3. Still in the same file `gnb.yaml`under the `amfConfigs` section, change the host value to the host of the free5gc node where the AMF is located.
 
 ```yaml
 amfConfigs:
@@ -207,7 +307,7 @@ go run server.go
 
 2. Go to the website hosting the database interface.
 
-The server runs on port 5000 by default.
+The server runs on port 5000 by default. You whatever your machine name is or use the ecternal IP address of your machine.
 
 ```
 http://user@pc750.emulab.net:5000
@@ -222,10 +322,10 @@ Password: free5gc
 
 4. Go to the `subscribers` tab and click on `add`.
 
-5. Change the USIM Type to `Op` instead of `OPc`
+5. Change the USIM Type from `OPc` to `Op`
 
 ```
-USIM Type: OPc
+USIM Type: Op
 ```
 
 Make sure the other UE values (IMSI, key, op, etc) match the UE values found in the UERANSIM configuration `UERANSIM/config/free5gc/ue.yaml`.
@@ -239,24 +339,25 @@ change anything else except the `USIM Type`.
 
 ## Run free5gc and UERANSIM
 
-1. On the `free5gc` node, start the free5gc core all-in-one.
+1. On all 3 `UPF` nodes, start the UPF function.
+
+```bash
+cd ~/free5gc/src/upf/build
+sudo -E ./bin/free5gc-upfd
+```
+
+2. On the `free5gc` node, start the free5gc core all-in-one.
 
 ```bash
 cd ~/free5gc
 ./run.sh
 ```
 
-2. On the `sim-ran` node, start the UERANSIM.
+3. On the `sim-ran` node, start the UERANSIM.
 
 ```bash
 cd ~/UERANSIM
 ./run.sh
-```
-
-Note: You may have to make `run.sh` executable.
-
-```bash
-chmod 700 run.sh
 ```
 
 At this point, you can use the UERANSIM interface to register, deregister, and connect to the data network over the free5gc core. I have yet to figure out how to do other things such as run an application over the UERANSIM or perform other mobile operations. Refer to the next section below.
@@ -264,8 +365,6 @@ At this point, you can use the UERANSIM interface to register, deregister, and c
 # Challenges
 
 - Have yet to get an example application running over the UERANSIM and using the free5gc core.
-- Using the test files provided in free5gc to see how they get N3IWF-based applications working and how they trigger scenraios like handoff, UE simulation, etc.
-- Looking into other configurations in the free5gc core `smfcfg.conf`, `uerouting.yaml`.
 
 # References
 
