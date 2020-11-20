@@ -180,10 +180,10 @@ configuration:
     - 10.10.1.2
 ```
 
-2. In `smfcfg.conf`, set the user plane information base don your setup. I'm using example 2 provided in the [free5gc wiki](https://github.com/free5gc/free5gc/wiki/SMF-Config)
+2. In `free5gc/config/smfcfg.conf`, configure the `userplane_information` and `links` sections based on your setup. Again, I'm using example 2 provided in the [free5gc wiki](https://github.com/free5gc/free5gc/wiki/SMF-Config).
 ```yaml
   pfcp:
-    addr: s10.10.1.2
+    addr: 10.10.1.2
   userplane_information:
     up_nodes:
       gNB1:
@@ -210,13 +210,15 @@ configuration:
 3. Still in `smfcfg.conf`, add `ulcl: true` at the very bottom.
 
 ```yaml
-  nrfUri: http://nrf.free5gc.org:29510
+  nrfUri: http://nrf.free5gc.org:29510 # <-- This already exists
   ulcl: true
 ```
 
-4. Configure the `upfcfg.conf` for each UPF you have. In my case, I have a UPF branching point with two UPF anchors, so my config would be the following.
+4. Configure the `pfcp` and `gtpu` addresses in `free5gc/src/upf/build/config/upfcfg.yaml` on each `UPF` node you have.
 
-Branching UPF `upfcfg.conf`:
+In my case, I have a UPF branching point with two UPF anchors, so my config would be the following:
+
+Branching UPF `upfcfg.yaml`:
 ```yaml
   pfcp:
     - addr: 10.10.1.3
@@ -225,7 +227,7 @@ Branching UPF `upfcfg.conf`:
     - addr: 10.10.1.3
 ```
 
-Anchor UPF 1 `upfcfg.conf`:
+Anchor UPF 1 `upfcfg.yaml`:
 ```yaml
   pfcp:
     - addr: 10.10.1.4
@@ -234,7 +236,7 @@ Anchor UPF 1 `upfcfg.conf`:
     - addr: 10.10.1.4
 ```
 
-Anchor UPF 2 `upfcfg.conf`:
+Anchor UPF 2 `upfcfg.yaml`:
 ```yaml
   pfcp:
     - addr: 10.10.1.5
@@ -243,7 +245,9 @@ Anchor UPF 2 `upfcfg.conf`:
     - addr: 10.10.1.5
 ```
 
-5. Finally, configure `uerouting.yaml`. There are already existing UEs, but I add the followng one using the default SUPI that matches the default one added in the free5gc web console when you add a new subscriber.
+5. Finally, configure `free5gc/config/uerouting.yaml`.
+
+There are already existing UEs, but I add the followng one using the default SUPI that matches the default one added in the free5gc web console when you add a new subscriber.
 
 ```yaml
   - SUPI: imsi-2089300007487
