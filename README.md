@@ -6,7 +6,9 @@ Refer to the references at the bottom for links to the free5gc and UERANSIM repo
 
 ### Prerequisites
 
-0. Spin up a PowderWireless node using a linux profile with the kernel version 5.0.0-23-generic.
+1. Create a network setup with one or more machines running Ubuntu 18 with kernel 5.0.0-23-generic.
+
+For my project, I am using the [PowderWireless Platform](https://powderwireless.net) ran by the FLUX research group at the University of Utah.
 
 Note: You can also set up multiple connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well. Please refer to my example profiles linked below.
 
