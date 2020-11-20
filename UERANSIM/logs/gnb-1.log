@@ -1,0 +1,1374 @@
+[97m[2020-11-19 23:21:25.101] [INFO] [CONNECTION] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-19 23:21:25.111] [INFO] [CONNECTION] SCTP connection established[0m
+[97m[2020-11-19 23:21:25.118] [FUNC_IN] Starting: NGSetupRequest[0m
+[97m[2020-11-19 23:21:25.119]   [INFO] [PROCEDURE_RESULT] NGSetup procedure is starting[0m
+[97m[2020-11-19 23:21:25.214]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_NGSetupRequest[0m
+[97m[2020-11-19 23:21:25.366]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupRequest": {"protocolIEs": {"NGSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 27,[0m
+[97m      "value": {"GlobalRANNodeID": {"globalGNB-ID": {[0m
+[97m        "gNB-ID": {"gNB-ID": "00000000000000000000000000000001"},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 102,[0m
+[97m      "value": {"SupportedTAList": {"SupportedTAItem": {[0m
+[97m        "broadcastPLMNList": {"BroadcastPLMNItem": {[0m
+[97m          "tAISliceSupportList": {"SliceSupportItem": {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }}},[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }},[0m
+[97m        "tAC": "000001"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 21,[0m
+[97m      "value": {"PagingDRX": "v64"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:25.379] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:26.141] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-19 23:21:26.154] [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupResponse": {"protocolIEs": {"NGSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 1,[0m
+[97m      "value": {"AMFName": "AMF"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 96,[0m
+[97m      "value": {"ServedGUAMIList": {"ServedGUAMIItem": {"gUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 86,[0m
+[97m      "value": {"RelativeAMFCapacity": 255}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 80,[0m
+[97m      "value": {"PLMNSupportList": {"PLMNSupportItem": {[0m
+[97m        "sliceSupportList": {"SliceSupportItem": [[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }},[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": 112233,[0m
+[97m            "sST": "01"[0m
+[97m          }}[0m
+[97m        ]},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:26.156] [FUNC_IN] Handling: NGSetupResponse[0m
+[92;1m[2020-11-19 23:21:26.157]   [SUCCESS] [PROCEDURE_RESULT] NGSetup procedure is successful[0m
+[97m[2020-11-19 23:21:26.158] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.033] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-19 23:21:28.047]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialUEMessage[0m
+[97m[2020-11-19 23:21:28.055]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 15,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"InitialUEMessage": {"protocolIEs": {"InitialUEMessage-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e361dee8",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 90,[0m
+[97m      "value": {"RRCEstablishmentCause": "mo-Data"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.061] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.136] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-19 23:21:28.146] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e00560002000021677b37a54c8ef925c7b75c4165aca70520100f84640c9a9c8000c923d5099e74eb6c"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.146] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-19 23:21:28.149] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.223] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-19 23:21:28.237]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-19 23:21:28.244]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e00572d103c532af22ca99a6ac3cf50821829affc"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e361dee8",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.252] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.266] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-19 23:21:28.275] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e039ecb6563007e005d020004f0f0f0f0e1360100"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.275] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-19 23:21:28.279] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.423] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-19 23:21:28.437]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-19 23:21:28.444]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e04108a402a007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e361dee8",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.448] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.635] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-19 23:21:28.644] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e02160451a3017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.645] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-19 23:21:28.647] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.669] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-19 23:21:28.681]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-19 23:21:28.686]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e0240d5920c017e0043"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e361dee8",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:28.690] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:42.994] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-19 23:21:43.008]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-19 23:21:43.015]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e02c88b9f11027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e361def7",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:43.020] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.130] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-19 23:21:43.148] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupRequest": {"protocolIEs": {"InitialContextSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 110,[0m
+[97m      "value": {"UEAggregateMaximumBitRate": {[0m
+[97m        "uEAggregateMaximumBitRateDL": 2000000000,[0m
+[97m        "uEAggregateMaximumBitRateUL": 1000000000[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 28,[0m
+[97m      "value": {"GUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 71,[0m
+[97m      "value": {"PDUSessionResourceSetupListCxtReq": {"PDUSessionResourceSetupItemCxtReq": {[0m
+[97m        "pDUSessionResourceSetupRequestTransfer": "000003008b000a01f00a0a01030000000100860001000088000700000000093800",[0m
+[97m        "s-NSSAI": {[0m
+[97m          "sD": "010203",[0m
+[97m          "sST": "01"[0m
+[97m        },[0m
+[97m        "pDUSessionID": 1[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 0,[0m
+[97m      "value": {"AllowedNSSAI": {"AllowedNSSAI-Item": {"s-NSSAI": {[0m
+[97m        "sD": "010203",[0m
+[97m        "sST": "01"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 119,[0m
+[97m      "value": {"UESecurityCapabilities": {[0m
+[97m        "nRintegrityProtectionAlgorithms": "0000000100000000",[0m
+[97m        "eUTRAintegrityProtectionAlgorithms": "0000000000000000",[0m
+[97m        "eUTRAencryptionAlgorithms": "0000000000000000",[0m
+[97m        "nRencryptionAlgorithms": "0000000100000000"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 94,[0m
+[97m      "value": {"SecurityKey": "0010000011010011111101101001110100010001001100100100011010111101010101000111111001110010101101101000111110101011100001011101000111111111100001101001110011100010011110111010000101100000110000101011011000000000101001110101011011000001110001101111111111010010"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 36,[0m
+[97m      "value": {"MobilityRestrictionList": {"servingPLMN": "02f839"}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 34,[0m
+[97m      "value": {"MaskedIMEISV": "0011010101101001001110000000001101010110111111111111111110010000"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e0270a3856f027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:43.149] [FUNC_IN] Handling: Initial Context Setup Request[0m
+[97m[2020-11-19 23:21:43.168]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialContextSetupResponse[0m
+[97m[2020-11-19 23:21:43.171]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupResponse": {"protocolIEs": {"InitialContextSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-19 23:21:43.177] [FUNC_OUT] [0m
+[91;1m[2020-11-19 23:21:43.995] [ERROR] [GTP] TEID not found on GTP-U Uplink[0m
+[97m[2020-11-20 02:23:05.637] [INFO] [CONNECTION] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-20 02:23:05.647] [INFO] [CONNECTION] SCTP connection established[0m
+[97m[2020-11-20 02:23:05.652] [FUNC_IN] Starting: NGSetupRequest[0m
+[97m[2020-11-20 02:23:05.653]   [INFO] [PROCEDURE_RESULT] NGSetup procedure is starting[0m
+[97m[2020-11-20 02:23:05.748]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_NGSetupRequest[0m
+[97m[2020-11-20 02:23:05.869]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupRequest": {"protocolIEs": {"NGSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 27,[0m
+[97m      "value": {"GlobalRANNodeID": {"globalGNB-ID": {[0m
+[97m        "gNB-ID": {"gNB-ID": "00000000000000000000000000000001"},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 102,[0m
+[97m      "value": {"SupportedTAList": {"SupportedTAItem": {[0m
+[97m        "broadcastPLMNList": {"BroadcastPLMNItem": {[0m
+[97m          "tAISliceSupportList": {"SliceSupportItem": {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }}},[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }},[0m
+[97m        "tAC": "000001"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 21,[0m
+[97m      "value": {"PagingDRX": "v64"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:05.884] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:06.678] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:23:06.690] [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupResponse": {"protocolIEs": {"NGSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 1,[0m
+[97m      "value": {"AMFName": "AMF"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 96,[0m
+[97m      "value": {"ServedGUAMIList": {"ServedGUAMIItem": {"gUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 86,[0m
+[97m      "value": {"RelativeAMFCapacity": 255}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 80,[0m
+[97m      "value": {"PLMNSupportList": {"PLMNSupportItem": {[0m
+[97m        "sliceSupportList": {"SliceSupportItem": [[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }},[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": 112233,[0m
+[97m            "sST": "01"[0m
+[97m          }}[0m
+[97m        ]},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:06.692] [FUNC_IN] Handling: NGSetupResponse[0m
+[92;1m[2020-11-20 02:23:06.692]   [SUCCESS] [PROCEDURE_RESULT] NGSetup procedure is successful[0m
+[97m[2020-11-20 02:23:06.693] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:10.873] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:23:10.890]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialUEMessage[0m
+[97m[2020-11-20 02:23:10.900]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 15,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"InitialUEMessage": {"protocolIEs": {"InitialUEMessage-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e362097e",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 90,[0m
+[97m      "value": {"RRCEstablishmentCause": "mo-Data"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:10.907] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:10.995] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:23:11.004] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e005600020000211db98c63e05ccaff2b687a75a20530572010301ff723da9f8000132755353e0aaaa0"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.005] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:23:11.008] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.067] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:23:11.075]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:23:11.082]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e00572d1014a1c6c65d2c2fd394aa4deb3236d63d"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e362097f",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.088] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.102] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:23:11.110] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e03e6e7f3c3007e005d020004f0f0f0f0e1360100"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.110] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:23:11.113] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.228] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:23:11.237]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:23:11.244]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e049a964c2a007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e362097f",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.249] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.448] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:23:11.455] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e023fc18448017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.456] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:23:11.457] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.472] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:23:11.481]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:23:11.486]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e026b72a307017e0043"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e362097f",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:11.491] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:25.839] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:23:25.848]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:23:25.856]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e026969f294027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e362098d",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:25.862] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:25.978] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:23:25.997] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupRequest": {"protocolIEs": {"InitialContextSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 110,[0m
+[97m      "value": {"UEAggregateMaximumBitRate": {[0m
+[97m        "uEAggregateMaximumBitRateDL": 2000000000,[0m
+[97m        "uEAggregateMaximumBitRateUL": 1000000000[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 28,[0m
+[97m      "value": {"GUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 71,[0m
+[97m      "value": {"PDUSessionResourceSetupListCxtReq": {"PDUSessionResourceSetupItemCxtReq": {[0m
+[97m        "pDUSessionResourceSetupRequestTransfer": "000003008b000a01f00a0a01030000000100860001000088000700000000093800",[0m
+[97m        "s-NSSAI": {[0m
+[97m          "sD": "010203",[0m
+[97m          "sST": "01"[0m
+[97m        },[0m
+[97m        "pDUSessionID": 1[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 0,[0m
+[97m      "value": {"AllowedNSSAI": {"AllowedNSSAI-Item": {"s-NSSAI": {[0m
+[97m        "sD": "010203",[0m
+[97m        "sST": "01"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 119,[0m
+[97m      "value": {"UESecurityCapabilities": {[0m
+[97m        "nRintegrityProtectionAlgorithms": "0000000100000000",[0m
+[97m        "eUTRAintegrityProtectionAlgorithms": "0000000000000000",[0m
+[97m        "eUTRAencryptionAlgorithms": "0000000000000000",[0m
+[97m        "nRencryptionAlgorithms": "0000000100000000"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 94,[0m
+[97m      "value": {"SecurityKey": "0011110011001000101001110000010110001101001100111011010000101000101010001100101111111100010101010101010011001011101100001101001010000110100001100011101011101011100011000100111111000010111100101111010010111100001100110101001010110011101101010000000101010010"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 36,[0m
+[97m      "value": {"MobilityRestrictionList": {"servingPLMN": "02f839"}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 34,[0m
+[97m      "value": {"MaskedIMEISV": "0011010101101001001110000000001101010110111111111111111110010000"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e029abcb735027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:25.998] [FUNC_IN] Handling: Initial Context Setup Request[0m
+[97m[2020-11-20 02:23:26.017]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialContextSetupResponse[0m
+[97m[2020-11-20 02:23:26.020]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupResponse": {"protocolIEs": {"InitialContextSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:23:26.026] [FUNC_OUT] [0m
+[91;1m[2020-11-20 02:23:26.873] [ERROR] [GTP] TEID not found on GTP-U Uplink[0m
+[97m[2020-11-20 02:41:38.517] [INFO] [CONNECTION] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-20 02:41:38.527] [INFO] [CONNECTION] SCTP connection established[0m
+[97m[2020-11-20 02:41:38.533] [FUNC_IN] Starting: NGSetupRequest[0m
+[97m[2020-11-20 02:41:38.534]   [INFO] [PROCEDURE_RESULT] NGSetup procedure is starting[0m
+[97m[2020-11-20 02:41:38.636]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_NGSetupRequest[0m
+[97m[2020-11-20 02:41:38.759]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupRequest": {"protocolIEs": {"NGSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 27,[0m
+[97m      "value": {"GlobalRANNodeID": {"globalGNB-ID": {[0m
+[97m        "gNB-ID": {"gNB-ID": "00000000000000000000000000000001"},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 102,[0m
+[97m      "value": {"SupportedTAList": {"SupportedTAItem": {[0m
+[97m        "broadcastPLMNList": {"BroadcastPLMNItem": {[0m
+[97m          "tAISliceSupportList": {"SliceSupportItem": {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }}},[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }},[0m
+[97m        "tAC": "000001"[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 21,[0m
+[97m      "value": {"PagingDRX": "v64"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:38.771] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:39.558] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:41:39.571] [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 21,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"NGSetupResponse": {"protocolIEs": {"NGSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 1,[0m
+[97m      "value": {"AMFName": "AMF"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 96,[0m
+[97m      "value": {"ServedGUAMIList": {"ServedGUAMIItem": {"gUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 86,[0m
+[97m      "value": {"RelativeAMFCapacity": 255}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 80,[0m
+[97m      "value": {"PLMNSupportList": {"PLMNSupportItem": {[0m
+[97m        "sliceSupportList": {"SliceSupportItem": [[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": "010203",[0m
+[97m            "sST": "01"[0m
+[97m          }},[0m
+[97m          {"s-NSSAI": {[0m
+[97m            "sD": 112233,[0m
+[97m            "sST": "01"[0m
+[97m          }}[0m
+[97m        ]},[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:39.573] [FUNC_IN] Handling: NGSetupResponse[0m
+[92;1m[2020-11-20 02:41:39.574]   [SUCCESS] [PROCEDURE_RESULT] NGSetup procedure is successful[0m
+[97m[2020-11-20 02:41:39.575] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:45.986] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:41:46.006]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialUEMessage[0m
+[97m[2020-11-20 02:41:46.016]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 15,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"InitialUEMessage": {"protocolIEs": {"InitialUEMessage-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e3620dda",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 90,[0m
+[97m      "value": {"RRCEstablishmentCause": "mo-Data"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.021] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.098] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:41:46.107] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e0056000200002194b925b0380dfcfb5976304fcd76b2a52010a34a3cffbf958000dba75932d8d897c7"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.108] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:41:46.112] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.168] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:41:46.183]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:41:46.188]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e00572d10325c588ced2bc7c9939047e0f0a850af"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e3620dda",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.193] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.205] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:41:46.214] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e037c18775b007e005d020004f0f0f0f0e1360100"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.214] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:41:46.217] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.325] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:41:46.339]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:41:46.345]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e0421668f20007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e3620dda",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.349] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.526] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:41:46.534] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 4,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"DownlinkNASTransport": {"protocolIEs": {"DownlinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e02809ec698017e0042010177000b0202f839cafe000000000254070002f839000001150504010102035e010616012c"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.535] [FUNC_IN] Handling Downlink NAS Transport[0m
+[97m[2020-11-20 02:41:46.537] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.552] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:41:46.564]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:41:46.569]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e0238445018017e0043"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e3620dda",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:41:46.573] [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:00.947] [FUNC_IN] Handling Uplink NAS Transport[0m
+[97m[2020-11-20 02:42:00.963]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_UplinkNASTransport[0m
+[97m[2020-11-20 02:42:00.970]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 46,[0m
+[97m  "criticality": "ignore",[0m
+[97m  "value": {"UplinkNASTransport": {"protocolIEs": {"UplinkNASTransport-IEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e02aedca8bf027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 121,[0m
+[97m      "value": {"UserLocationInformation": {"userLocationInformationNR": {[0m
+[97m        "timeStamp": "e3620de8",[0m
+[97m        "nR-CGI": {[0m
+[97m          "pLMNIdentity": "02f839",[0m
+[97m          "nRCellIdentity": "000000000000000000000000000000010000"[0m
+[97m        },[0m
+[97m        "tAI": {[0m
+[97m          "tAC": "000001",[0m
+[97m          "pLMNIdentity": "02f839"[0m
+[97m        }[0m
+[97m      }}}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:42:00.975] [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.076] [DEBUG] [MESSAGING] Received NGAP: NGAP_PDU[0m
+[97m[2020-11-20 02:42:01.096] [DEBUG] [MESSAGING] {"NGAP-PDU": {"initiatingMessage": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupRequest": {"protocolIEs": {"InitialContextSetupRequestIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 110,[0m
+[97m      "value": {"UEAggregateMaximumBitRate": {[0m
+[97m        "uEAggregateMaximumBitRateDL": 2000000000,[0m
+[97m        "uEAggregateMaximumBitRateUL": 1000000000[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 28,[0m
+[97m      "value": {"GUAMI": {[0m
+[97m        "aMFRegionID": 11001010,[0m
+[97m        "aMFPointer": "000000",[0m
+[97m        "aMFSetID": 1111111000,[0m
+[97m        "pLMNIdentity": "02f839"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 71,[0m
+[97m      "value": {"PDUSessionResourceSetupListCxtReq": {"PDUSessionResourceSetupItemCxtReq": {[0m
+[97m        "pDUSessionResourceSetupRequestTransfer": "000003008b000a01f00a0a01030000000300860001000088000700000000093800",[0m
+[97m        "s-NSSAI": {[0m
+[97m          "sD": "010203",[0m
+[97m          "sST": "01"[0m
+[97m        },[0m
+[97m        "pDUSessionID": 1[0m
+[97m      }}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 0,[0m
+[97m      "value": {"AllowedNSSAI": {"AllowedNSSAI-Item": {"s-NSSAI": {[0m
+[97m        "sD": "010203",[0m
+[97m        "sST": "01"[0m
+[97m      }}}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 119,[0m
+[97m      "value": {"UESecurityCapabilities": {[0m
+[97m        "nRintegrityProtectionAlgorithms": "0000000100000000",[0m
+[97m        "eUTRAintegrityProtectionAlgorithms": "0000000000000000",[0m
+[97m        "eUTRAencryptionAlgorithms": "0000000000000000",[0m
+[97m        "nRencryptionAlgorithms": "0000000100000000"[0m
+[97m      }}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "reject",[0m
+[97m      "id": 94,[0m
+[97m      "value": {"SecurityKey": "0001011101100101000011010111111111001011100000011101010001011011101110101100001101100010000010001111001011011011111010000010111011001110110101110010011001001000000000011100101100100101100011011101110000101101100100100110010011111011101110010000011111001101"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 36,[0m
+[97m      "value": {"MobilityRestrictionList": {"servingPLMN": "02f839"}}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 34,[0m
+[97m      "value": {"MaskedIMEISV": "0011010101101001001110000000001101010110111111111111111110010000"}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 38,[0m
+[97m      "value": {"NAS-PDU": "7e02b39fbbaf027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201"}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:42:01.097] [FUNC_IN] Handling: Initial Context Setup Request[0m
+[97m[2020-11-20 02:42:01.116]   [DEBUG] [MESSAGING] Sending NGAP: NGAP_InitialContextSetupResponse[0m
+[97m[2020-11-20 02:42:01.119]   [DEBUG] [MESSAGING] {"NGAP-PDU": {"successfulOutcome": {[0m
+[97m  "procedureCode": 14,[0m
+[97m  "criticality": "reject",[0m
+[97m  "value": {"InitialContextSetupResponse": {"protocolIEs": {"InitialContextSetupResponseIEs": [[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 10,[0m
+[97m      "value": {"AMF-UE-NGAP-ID": 2}[0m
+[97m    },[0m
+[97m    {[0m
+[97m      "criticality": "ignore",[0m
+[97m      "id": 85,[0m
+[97m      "value": {"RAN-UE-NGAP-ID": 1}[0m
+[97m    }[0m
+[97m  ]}}}[0m
+[97m}}}[0m
+[97m[2020-11-20 02:42:01.125] [FUNC_OUT] [0m
+[91;1m[2020-11-20 02:42:02.002] [ERROR] [GTP] TEID not found on GTP-U Uplink[0m

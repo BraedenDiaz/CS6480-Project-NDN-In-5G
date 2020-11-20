@@ -1,0 +1,27 @@
+[97m[2020-11-19 23:21:25.082] [INFO] [CONNECTION] [air] TUN Bridge has been started.[0m
+[97m[2020-11-19 23:21:25.102] [INFO] [CONNECTION] [gnb-1] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-19 23:21:25.112] [INFO] [CONNECTION] [gnb-1] SCTP connection established[0m
+[92;1m[2020-11-19 23:21:26.157] [SUCCESS] [PROCEDURE_RESULT] [gnb-1] NGSetup procedure is successful[0m
+[92;1m[2020-11-19 23:21:28.670] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] Registration is successful[0m
+[97m[2020-11-19 23:21:28.980] [INFO] [SYSTEM] Waiting for user-defined sleep (15 s)[0m
+[92;1m[2020-11-19 23:21:43.188] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] PDU Session Establishment is successful[0m
+[91;1m[2020-11-19 23:21:43.995] [ERROR] [GTP] [gnb-1] TEID not found on GTP-U Uplink[0m
+[91;1m[2020-11-19 23:21:47.006] [ERROR] [UE_APP] [ue-imsi-208930000000003] Ping timeout for google.com (172.217.2.238) after 3 sec no response[0m
+[97m[2020-11-20 02:23:05.622] [INFO] [CONNECTION] [air] TUN Bridge has been started.[0m
+[97m[2020-11-20 02:23:05.638] [INFO] [CONNECTION] [gnb-1] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-20 02:23:05.647] [INFO] [CONNECTION] [gnb-1] SCTP connection established[0m
+[92;1m[2020-11-20 02:23:06.693] [SUCCESS] [PROCEDURE_RESULT] [gnb-1] NGSetup procedure is successful[0m
+[92;1m[2020-11-20 02:23:11.473] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] Registration is successful[0m
+[97m[2020-11-20 02:23:11.827] [INFO] [SYSTEM] Waiting for user-defined sleep (15 s)[0m
+[92;1m[2020-11-20 02:23:26.037] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] PDU Session Establishment is successful[0m
+[91;1m[2020-11-20 02:23:26.873] [ERROR] [GTP] [gnb-1] TEID not found on GTP-U Uplink[0m
+[91;1m[2020-11-20 02:23:29.881] [ERROR] [UE_APP] [ue-imsi-208930000000003] Ping timeout for google.com (172.217.9.14) after 3 sec no response[0m
+[97m[2020-11-20 02:41:38.500] [INFO] [CONNECTION] [air] TUN Bridge has been started.[0m
+[97m[2020-11-20 02:41:38.518] [INFO] [CONNECTION] [gnb-1] Trying to establish SCTP connection... (10.10.1.2:38412)[0m
+[97m[2020-11-20 02:41:38.528] [INFO] [CONNECTION] [gnb-1] SCTP connection established[0m
+[92;1m[2020-11-20 02:41:39.574] [SUCCESS] [PROCEDURE_RESULT] [gnb-1] NGSetup procedure is successful[0m
+[92;1m[2020-11-20 02:41:46.553] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] Registration is successful[0m
+[97m[2020-11-20 02:41:46.935] [INFO] [SYSTEM] Waiting for user-defined sleep (15 s)[0m
+[92;1m[2020-11-20 02:42:01.136] [SUCCESS] [PROCEDURE_RESULT] [ue-imsi-208930000000003] PDU Session Establishment is successful[0m
+[91;1m[2020-11-20 02:42:02.002] [ERROR] [GTP] [gnb-1] TEID not found on GTP-U Uplink[0m
+[91;1m[2020-11-20 02:42:05.011] [ERROR] [UE_APP] [ue-imsi-208930000000003] Ping timeout for google.com (172.217.2.238) after 3 sec no response[0m

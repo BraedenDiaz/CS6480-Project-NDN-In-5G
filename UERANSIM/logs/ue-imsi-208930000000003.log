@@ -1,0 +1,2583 @@
+[97m[2020-11-19 23:21:26.219] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__PLMN_SEARCH[0m
+[97m[2020-11-19 23:21:26.221] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__NORMAL_SERVICE[0m
+[97m[2020-11-19 23:21:27.981] [FUNC_IN] Starting: Registration procedure (initial registration)[0m
+[97m[2020-11-19 23:21:27.981]   [INFO] [STATE] UE switches to state: MM_REGISTERED_INITIATED/MM_REGISTERED_INITIATED__NA[0m
+[97m[2020-11-19 23:21:27.983]   [FUNC_IN] Get or Generate SUCI[0m
+[97m[2020-11-19 23:21:27.984]     [DEBUG] [PROC] T3519 is not running, new SUCI generated.[0m
+[97m[2020-11-19 23:21:27.984]     [DEBUG] [NAS_TIMER] NAS Timer 3519 started with interval: 60s[0m
+[97m[2020-11-19 23:21:27.985]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:27.986]   [DEBUG] [NAS_TIMER] NAS Timer 3510 started with interval: 15s[0m
+[97m[2020-11-19 23:21:27.987]   [FUNC_IN] Sending NAS message: RegistrationRequest[0m
+[97m[2020-11-19 23:21:28.024]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.026]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-19 23:21:28.027]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.029]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-19 23:21:28.030]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.031] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.149] [FUNC_IN] Receiving NAS message: AuthenticationRequest[0m
+[97m[2020-11-19 23:21:28.153]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "677b37a54c8ef925c7b75c4165aca705"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "0f84640c9a9c8000c923d5099e74eb6c"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.154]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e00560002000021677b37a54c8ef925c7b75c4165aca70520100f84640c9a9c8000c923d5099e74eb6c[0m
+[97m[2020-11-19 23:21:28.155]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "677b37a54c8ef925c7b75c4165aca705"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "0f84640c9a9c8000c923d5099e74eb6c"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.156]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e00560002000021677b37a54c8ef925c7b75c4165aca70520100f84640c9a9c8000c923d5099e74eb6c[0m
+[97m[2020-11-19 23:21:28.158]   [FUNC_IN] Handling: 5G AKA Authentication Request[0m
+[93;1m[2020-11-19 23:21:28.158]     [WARNING] [CONFIG] USE_SQN_HACK: true[0m
+[97m[2020-11-19 23:21:28.158]     [DEBUG] [VALUE] received rand: 677b37a54c8ef925c7b75c4165aca705[0m
+[97m[2020-11-19 23:21:28.159]     [DEBUG] [VALUE] received autn: 0f84640c9a9c8000c923d5099e74eb6c[0m
+[97m[2020-11-19 23:21:28.207]     [DEBUG] [VALUE] calculated res: 4c3ca3ae9c7b7742[0m
+[97m[2020-11-19 23:21:28.208]     [DEBUG] [VALUE] calculated ck: b7707d51928323bfe36933ae6ba4ce33[0m
+[97m[2020-11-19 23:21:28.208]     [DEBUG] [VALUE] calculated ik: 847035767f70e728bc33f0cf05647f2b[0m
+[97m[2020-11-19 23:21:28.209]     [DEBUG] [VALUE] calculated milenageAk: 1977d7fb9558[0m
+[97m[2020-11-19 23:21:28.209]     [DEBUG] [VALUE] calculated milenageMac: c923d5099e74eb6c[0m
+[97m[2020-11-19 23:21:28.210]     [DEBUG] [VALUE] used snn: 5G:mnc093.mcc208.3gppnetwork.org[0m
+[97m[2020-11-19 23:21:28.210]     [DEBUG] [VALUE] used sqn: 16f3b3f70fc4[0m
+[97m[2020-11-19 23:21:28.211]     [DEBUG] [VALUE] autnCheck: OK[0m
+[97m[2020-11-19 23:21:28.220]     [FUNC_IN] Sending NAS message: AuthenticationResponse[0m
+[97m[2020-11-19 23:21:28.221]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "3c532af22ca99a6ac3cf50821829affc"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.222]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e00572d103c532af22ca99a6ac3cf50821829affc[0m
+[97m[2020-11-19 23:21:28.222]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "3c532af22ca99a6ac3cf50821829affc"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.223]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e00572d103c532af22ca99a6ac3cf50821829affc[0m
+[97m[2020-11-19 23:21:28.223]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.224]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.224] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.279] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-19 23:21:28.280]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 3,[0m
+[97m    "name": "Integrity protected with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x9ecb6563",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005d020004f0f0f0f0e1360100",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.280]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e039ecb6563007e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-19 23:21:28.283]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "selectedNasSecurityAlgorithms": {[0m
+[97m    "typeOfIntegrityProtectionAlgorithm": {[0m
+[97m      "value": 2,[0m
+[97m      "name": "5G integrity algorithm 128-5G-IA2"[0m
+[97m    },[0m
+[97m    "typeOfCipheringAlgorithm": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "ngKsi": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "replayedUeSecurityCapabilities": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "imeiSvRequest": {[0m
+[97m    "imeiSvRequest": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "IMEISV requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "additional5gSecurityInformation": {[0m
+[97m    "hdp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "K_AMF derivation is not required"[0m
+[97m    },[0m
+[97m    "rinmr": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Retransmission of the initial NAS message not requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "_macForNewSC": "0x9ecb6563",[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 93,[0m
+[97m    "name": "Security mode command"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.284]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-19 23:21:28.284]   [FUNC_IN] Handling: Security Mode Command[0m
+[97m[2020-11-19 23:21:28.285]     [DEBUG] [VALUE] kNasEnc: 808060e4fd2206f5c91a5b20729cd9aa[0m
+[97m[2020-11-19 23:21:28.286]     [DEBUG] [VALUE] kNasInt: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:28.286]     [DEBUG] [VALUE] selectedIntAlg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:28.286]     [DEBUG] [VALUE] selectedEncAlg: 5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)[0m
+[97m[2020-11-19 23:21:28.287]     [FUNC_IN] Sending NAS message: SecurityModeComplete[0m
+[97m[2020-11-19 23:21:28.288]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-19 23:21:28.289]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:28.289]         [DEBUG] [VALUE] count: 0x00000000[0m
+[97m[2020-11-19 23:21:28.290]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-19 23:21:28.290]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-19 23:21:28.291]         [DEBUG] [VALUE] message: 007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-19 23:21:28.291]         [DEBUG] [VALUE] key: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:28.420]       [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.421]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "imeiSv": {[0m
+[97m    "imeiSv": "356938035643809"[0m
+[97m  },[0m
+[97m  "nasMessageContainer": {[0m
+[97m    "value": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 94,[0m
+[97m    "name": "Security mode complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.422]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-19 23:21:28.422]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 4,[0m
+[97m    "name": "Integrity protected and ciphered with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x108a402a",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.423]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e04108a402a007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-19 23:21:28.423]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.424]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.424] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.647] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-19 23:21:28.648]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x160451a3",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.648]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e02160451a3017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-19 23:21:28.649]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-19 23:21:28.649]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-19 23:21:28.649]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:28.650]       [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-19 23:21:28.650]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-19 23:21:28.650]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-19 23:21:28.650]       [DEBUG] [VALUE] message: 017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-19 23:21:28.651]       [DEBUG] [VALUE] key: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:28.651]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.652]     [DEBUG] [VALUE] computed mac: 0x160451a3[0m
+[97m[2020-11-19 23:21:28.652]     [DEBUG] [VALUE] mac received in message: 0x160451a3[0m
+[97m[2020-11-19 23:21:28.652]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-19 23:21:28.653]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.655]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.661]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "registrationResult": {[0m
+[97m    "smsOverNasAllowed": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "SMS over NAS not allowed"[0m
+[97m    },[0m
+[97m    "registrationResult": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "3GPP access"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "amfRegionId": "0xca",[0m
+[97m    "amfSetId": {[0m
+[97m      "value": 1016[0m
+[97m    },[0m
+[97m    "amfPointer": 0,[0m
+[97m    "tmsi": {[0m
+[97m      "value": "0x00000001"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "allowedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "t3512Value": {[0m
+[97m    "timerValue": 6,[0m
+[97m    "unit": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "value is incremented in multiples of 10 minutes"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "t3502Value": {[0m
+[97m    "value": "0x2c"[0m
+[97m  },[0m
+[97m  "taiList": {[0m
+[97m    "partialTrackingAreaIdentityLists": [[0m
+[97m      {[0m
+[97m        "mccMnc": {[0m
+[97m          "mcc": {[0m
+[97m            "value": 208,[0m
+[97m            "name": "France"[0m
+[97m          },[0m
+[97m          "mnc": {[0m
+[97m            "value": 93,[0m
+[97m            "name": "93"[0m
+[97m          }[0m
+[97m        },[0m
+[97m        "tacs": [[0m
+[97m          "0x000001"[0m
+[97m        ][0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 66,[0m
+[97m    "name": "Registration accept"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.662]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e0042010177000bf202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-19 23:21:28.663]   [FUNC_IN] Handling: Registration Accept[0m
+[97m[2020-11-19 23:21:28.664]     [DEBUG] [NAS_TIMER] NAS Timer 3512 started with interval: 3600s[0m
+[97m[2020-11-19 23:21:28.664]     [DEBUG] [NAS_TIMER] NAS Timer 3519 stopped[0m
+[97m[2020-11-19 23:21:28.664]     [FUNC_IN] Sending NAS message: RegistrationComplete[0m
+[97m[2020-11-19 23:21:28.665]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-19 23:21:28.665]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:28.665]         [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-19 23:21:28.666]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-19 23:21:28.666]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-19 23:21:28.667]         [DEBUG] [VALUE] message: 017e0043[0m
+[97m[2020-11-19 23:21:28.667]         [DEBUG] [VALUE] key: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:28.667]       [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.668]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 67,[0m
+[97m    "name": "Registration complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.668]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e0043[0m
+[97m[2020-11-19 23:21:28.668]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x40d5920c",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0043",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:28.668]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e0240d5920c017e0043[0m
+[97m[2020-11-19 23:21:28.669]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.669]     [INFO] [STATE] UE switches to state: RM_REGISTERED[0m
+[97m[2020-11-19 23:21:28.669]     [INFO] [STATE] UE switches to state: MM_REGISTERED/MM_REGISTERED__NORMAL_SERVICE[0m
+[92;1m[2020-11-19 23:21:28.670]     [SUCCESS] [PROCEDURE_RESULT] Registration is successful[0m
+[97m[2020-11-19 23:21:28.670]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:28.671] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:29.218] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:14s[0m
+[97m[2020-11-19 23:21:29.219] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3600s[0m
+[97m[2020-11-19 23:21:39.722] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:4s[0m
+[97m[2020-11-19 23:21:39.724] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3589s[0m
+[97m[2020-11-19 23:21:42.985] [FUNC_IN] Sending PDU Session Establishment Request[0m
+[97m[2020-11-19 23:21:42.986]   [DEBUG] [PROC] PDU session allocated: PDU session identity value 1[0m
+[97m[2020-11-19 23:21:42.986]   [DEBUG] [PROC] PTI allocated: Procedure transaction identity value 1[0m
+[97m[2020-11-19 23:21:42.987]   [DEBUG] [NAS_TIMER] NAS Timer 3580 started with interval: 16s[0m
+[97m[2020-11-19 23:21:42.988]   [FUNC_IN] Sending NAS message: UlNasTransport[0m
+[97m[2020-11-19 23:21:42.988]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-19 23:21:42.988]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:42.989]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-19 23:21:42.989]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-19 23:21:42.989]       [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-19 23:21:42.989]       [DEBUG] [VALUE] message: 027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-19 23:21:42.990]       [DEBUG] [VALUE] key: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:42.990]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:42.992]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c1ffff91a17b000780000a00000d00"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "requestType": {[0m
+[97m    "requestType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial request"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "sNssa": {[0m
+[97m    "sst": {[0m
+[97m      "value": "0x01"[0m
+[97m    },[0m
+[97m    "sd": {[0m
+[97m      "value": "0x010203"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "dnn": {[0m
+[97m    "data": "08696e7465726e6574"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 103,[0m
+[97m    "name": "UL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:42.992]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-19 23:21:42.992]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0xc88b9f11",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:42.993]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e02c88b9f11027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-19 23:21:42.993]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:42.993] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.177] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-19 23:21:43.177]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x70a3856f",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:43.178]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e0270a3856f027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-19 23:21:43.178]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-19 23:21:43.178]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-19 23:21:43.178]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-19 23:21:43.179]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-19 23:21:43.179]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-19 23:21:43.179]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-19 23:21:43.179]       [DEBUG] [VALUE] message: 027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-19 23:21:43.180]       [DEBUG] [VALUE] key: a3481e727f8ebfff12e18dfb250a1bb0[0m
+[97m[2020-11-19 23:21:43.180]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.180]     [DEBUG] [VALUE] computed mac: 0x70a3856f[0m
+[97m[2020-11-19 23:21:43.180]     [DEBUG] [VALUE] mac received in message: 0x70a3856f[0m
+[97m[2020-11-19 23:21:43.181]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-19 23:21:43.181]     [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.181]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.182]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e6574"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 104,[0m
+[97m    "name": "DL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-19 23:21:43.182]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-19 23:21:43.187]   [FUNC_IN] Handling: PDU Session Establishment Accept[0m
+[93;1m[2020-11-19 23:21:43.187]     [WARNING] [PROC] SM cause received in PduSessionEstablishmentAccept: PDU session type IPv4 only allowed[0m
+[97m[2020-11-19 23:21:43.187]     [DEBUG] [NAS_TIMER] NAS Timer 3580 stopped[0m
+[97m[2020-11-19 23:21:43.187]     [DEBUG] [PROC] PTI released: Procedure transaction identity value 1[0m
+[97m[2020-11-19 23:21:43.188]     [INFO] [PROC] PDU session established: PDU session identity value 1[0m
+[97m[2020-11-19 23:21:43.188]     [INFO] [UE_APP] IPv4 connection setup with local IP: 60.60.0.1[0m
+[92;1m[2020-11-19 23:21:43.188]     [SUCCESS] [PROCEDURE_RESULT] PDU Session Establishment is successful[0m
+[97m[2020-11-19 23:21:43.188]   [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:43.188] [FUNC_OUT] [0m
+[97m[2020-11-19 23:21:44.225] [DEBUG] [NAS_TIMER] NAS Timer 3510 stopped[0m
+[97m[2020-11-19 23:21:44.228] [INFO] [NAS_TIMER] NAS Timer expired: NasTimer{timerCode=3510}[0m
+[91;1m[2020-11-19 23:21:47.006] [ERROR] [UE_APP] Ping timeout for google.com (172.217.2.238) after 3 sec no response[0m
+[97m[2020-11-19 23:21:50.226] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3579s[0m
+[97m[2020-11-20 02:23:06.753] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__PLMN_SEARCH[0m
+[97m[2020-11-20 02:23:06.754] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__NORMAL_SERVICE[0m
+[97m[2020-11-20 02:23:10.828] [FUNC_IN] Starting: Registration procedure (initial registration)[0m
+[97m[2020-11-20 02:23:10.829]   [INFO] [STATE] UE switches to state: MM_REGISTERED_INITIATED/MM_REGISTERED_INITIATED__NA[0m
+[97m[2020-11-20 02:23:10.831]   [FUNC_IN] Get or Generate SUCI[0m
+[97m[2020-11-20 02:23:10.833]     [DEBUG] [PROC] T3519 is not running, new SUCI generated.[0m
+[97m[2020-11-20 02:23:10.833]     [DEBUG] [NAS_TIMER] NAS Timer 3519 started with interval: 60s[0m
+[97m[2020-11-20 02:23:10.833]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:10.834]   [DEBUG] [NAS_TIMER] NAS Timer 3510 started with interval: 15s[0m
+[97m[2020-11-20 02:23:10.835]   [FUNC_IN] Sending NAS message: RegistrationRequest[0m
+[97m[2020-11-20 02:23:10.865]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:10.866]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:23:10.867]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:10.868]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:23:10.869]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:10.869] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.008] [FUNC_IN] Receiving NAS message: AuthenticationRequest[0m
+[97m[2020-11-20 02:23:11.010]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "1db98c63e05ccaff2b687a75a2053057"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "301ff723da9f8000132755353e0aaaa0"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.010]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e005600020000211db98c63e05ccaff2b687a75a20530572010301ff723da9f8000132755353e0aaaa0[0m
+[97m[2020-11-20 02:23:11.011]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "1db98c63e05ccaff2b687a75a2053057"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "301ff723da9f8000132755353e0aaaa0"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.011]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e005600020000211db98c63e05ccaff2b687a75a20530572010301ff723da9f8000132755353e0aaaa0[0m
+[97m[2020-11-20 02:23:11.013]   [FUNC_IN] Handling: 5G AKA Authentication Request[0m
+[93;1m[2020-11-20 02:23:11.014]     [WARNING] [CONFIG] USE_SQN_HACK: true[0m
+[97m[2020-11-20 02:23:11.014]     [DEBUG] [VALUE] received rand: 1db98c63e05ccaff2b687a75a2053057[0m
+[97m[2020-11-20 02:23:11.014]     [DEBUG] [VALUE] received autn: 301ff723da9f8000132755353e0aaaa0[0m
+[97m[2020-11-20 02:23:11.054]     [DEBUG] [VALUE] calculated res: c9707c77c549f67a[0m
+[97m[2020-11-20 02:23:11.054]     [DEBUG] [VALUE] calculated ck: c5f7c8f74315855dee158484d1029b82[0m
+[97m[2020-11-20 02:23:11.054]     [DEBUG] [VALUE] calculated ik: 0d6608d6bdc31352919bb2357b157604[0m
+[97m[2020-11-20 02:23:11.055]     [DEBUG] [VALUE] calculated milenageAk: 26ec44d4d559[0m
+[97m[2020-11-20 02:23:11.055]     [DEBUG] [VALUE] calculated milenageMac: 132755353e0aaaa0[0m
+[97m[2020-11-20 02:23:11.055]     [DEBUG] [VALUE] used snn: 5G:mnc093.mcc208.3gppnetwork.org[0m
+[97m[2020-11-20 02:23:11.055]     [DEBUG] [VALUE] used sqn: 16f3b3f70fc6[0m
+[97m[2020-11-20 02:23:11.056]     [DEBUG] [VALUE] autnCheck: OK[0m
+[97m[2020-11-20 02:23:11.064]     [FUNC_IN] Sending NAS message: AuthenticationResponse[0m
+[97m[2020-11-20 02:23:11.065]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "14a1c6c65d2c2fd394aa4deb3236d63d"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.065]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e00572d1014a1c6c65d2c2fd394aa4deb3236d63d[0m
+[97m[2020-11-20 02:23:11.066]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "14a1c6c65d2c2fd394aa4deb3236d63d"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.066]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e00572d1014a1c6c65d2c2fd394aa4deb3236d63d[0m
+[97m[2020-11-20 02:23:11.067]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.067]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.067] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.113] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:23:11.114]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 3,[0m
+[97m    "name": "Integrity protected with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0xe6e7f3c3",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005d020004f0f0f0f0e1360100",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.114]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e03e6e7f3c3007e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-20 02:23:11.116]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "selectedNasSecurityAlgorithms": {[0m
+[97m    "typeOfIntegrityProtectionAlgorithm": {[0m
+[97m      "value": 2,[0m
+[97m      "name": "5G integrity algorithm 128-5G-IA2"[0m
+[97m    },[0m
+[97m    "typeOfCipheringAlgorithm": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "ngKsi": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "replayedUeSecurityCapabilities": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "imeiSvRequest": {[0m
+[97m    "imeiSvRequest": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "IMEISV requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "additional5gSecurityInformation": {[0m
+[97m    "hdp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "K_AMF derivation is not required"[0m
+[97m    },[0m
+[97m    "rinmr": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Retransmission of the initial NAS message not requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "_macForNewSC": "0xe6e7f3c3",[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 93,[0m
+[97m    "name": "Security mode command"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.116]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-20 02:23:11.117]   [FUNC_IN] Handling: Security Mode Command[0m
+[97m[2020-11-20 02:23:11.118]     [DEBUG] [VALUE] kNasEnc: a41d46524a3e2eb9b5af3ada1d4afe3a[0m
+[97m[2020-11-20 02:23:11.118]     [DEBUG] [VALUE] kNasInt: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:11.118]     [DEBUG] [VALUE] selectedIntAlg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:11.118]     [DEBUG] [VALUE] selectedEncAlg: 5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)[0m
+[97m[2020-11-20 02:23:11.119]     [FUNC_IN] Sending NAS message: SecurityModeComplete[0m
+[97m[2020-11-20 02:23:11.120]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:23:11.120]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:11.121]         [DEBUG] [VALUE] count: 0x00000000[0m
+[97m[2020-11-20 02:23:11.121]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:23:11.121]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:23:11.121]         [DEBUG] [VALUE] message: 007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:23:11.122]         [DEBUG] [VALUE] key: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:11.225]       [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.226]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "imeiSv": {[0m
+[97m    "imeiSv": "356938035643809"[0m
+[97m  },[0m
+[97m  "nasMessageContainer": {[0m
+[97m    "value": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 94,[0m
+[97m    "name": "Security mode complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.227]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:23:11.227]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 4,[0m
+[97m    "name": "Integrity protected and ciphered with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x9a964c2a",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.228]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e049a964c2a007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:23:11.228]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.228]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.229] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.252] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:15s[0m
+[97m[2020-11-20 02:23:11.253] [DEBUG] [NAS_TIMER] NAS Timer 3519 int:60s rem:60s[0m
+[97m[2020-11-20 02:23:11.457] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:23:11.458]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x3fc18448",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.458]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e023fc18448017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:23:11.458]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-20 02:23:11.458]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:23:11.459]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:11.459]       [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-20 02:23:11.459]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:23:11.459]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-20 02:23:11.460]       [DEBUG] [VALUE] message: 017e0042010177000b0202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:23:11.460]       [DEBUG] [VALUE] key: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:11.460]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.460]     [DEBUG] [VALUE] computed mac: 0x3fc18448[0m
+[97m[2020-11-20 02:23:11.461]     [DEBUG] [VALUE] mac received in message: 0x3fc18448[0m
+[97m[2020-11-20 02:23:11.461]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-20 02:23:11.461]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.463]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.467]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "registrationResult": {[0m
+[97m    "smsOverNasAllowed": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "SMS over NAS not allowed"[0m
+[97m    },[0m
+[97m    "registrationResult": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "3GPP access"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "amfRegionId": "0xca",[0m
+[97m    "amfSetId": {[0m
+[97m      "value": 1016[0m
+[97m    },[0m
+[97m    "amfPointer": 0,[0m
+[97m    "tmsi": {[0m
+[97m      "value": "0x00000001"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "allowedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "t3512Value": {[0m
+[97m    "timerValue": 6,[0m
+[97m    "unit": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "value is incremented in multiples of 10 minutes"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "t3502Value": {[0m
+[97m    "value": "0x2c"[0m
+[97m  },[0m
+[97m  "taiList": {[0m
+[97m    "partialTrackingAreaIdentityLists": [[0m
+[97m      {[0m
+[97m        "mccMnc": {[0m
+[97m          "mcc": {[0m
+[97m            "value": 208,[0m
+[97m            "name": "France"[0m
+[97m          },[0m
+[97m          "mnc": {[0m
+[97m            "value": 93,[0m
+[97m            "name": "93"[0m
+[97m          }[0m
+[97m        },[0m
+[97m        "tacs": [[0m
+[97m          "0x000001"[0m
+[97m        ][0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 66,[0m
+[97m    "name": "Registration accept"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.468]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e0042010177000bf202f839cafe000000000154070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:23:11.468]   [FUNC_IN] Handling: Registration Accept[0m
+[97m[2020-11-20 02:23:11.469]     [DEBUG] [NAS_TIMER] NAS Timer 3512 started with interval: 3600s[0m
+[97m[2020-11-20 02:23:11.469]     [DEBUG] [NAS_TIMER] NAS Timer 3519 stopped[0m
+[97m[2020-11-20 02:23:11.469]     [FUNC_IN] Sending NAS message: RegistrationComplete[0m
+[97m[2020-11-20 02:23:11.469]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:23:11.470]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:11.470]         [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-20 02:23:11.470]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:23:11.470]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:23:11.470]         [DEBUG] [VALUE] message: 017e0043[0m
+[97m[2020-11-20 02:23:11.471]         [DEBUG] [VALUE] key: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:11.471]       [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.471]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 67,[0m
+[97m    "name": "Registration complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.471]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e0043[0m
+[97m[2020-11-20 02:23:11.472]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x6b72a307",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0043",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:11.472]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e026b72a307017e0043[0m
+[97m[2020-11-20 02:23:11.472]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.472]     [INFO] [STATE] UE switches to state: RM_REGISTERED[0m
+[97m[2020-11-20 02:23:11.473]     [INFO] [STATE] UE switches to state: MM_REGISTERED/MM_REGISTERED__NORMAL_SERVICE[0m
+[92;1m[2020-11-20 02:23:11.473]     [SUCCESS] [PROCEDURE_RESULT] Registration is successful[0m
+[97m[2020-11-20 02:23:11.473]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:11.474] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:12.753] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3599s[0m
+[97m[2020-11-20 02:23:21.756] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:5s[0m
+[97m[2020-11-20 02:23:23.258] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3589s[0m
+[97m[2020-11-20 02:23:25.831] [FUNC_IN] Sending PDU Session Establishment Request[0m
+[97m[2020-11-20 02:23:25.832]   [DEBUG] [PROC] PDU session allocated: PDU session identity value 1[0m
+[97m[2020-11-20 02:23:25.832]   [DEBUG] [PROC] PTI allocated: Procedure transaction identity value 1[0m
+[97m[2020-11-20 02:23:25.834]   [DEBUG] [NAS_TIMER] NAS Timer 3580 started with interval: 16s[0m
+[97m[2020-11-20 02:23:25.834]   [FUNC_IN] Sending NAS message: UlNasTransport[0m
+[97m[2020-11-20 02:23:25.835]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:23:25.835]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:25.835]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-20 02:23:25.835]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:23:25.835]       [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:23:25.836]       [DEBUG] [VALUE] message: 027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:23:25.836]       [DEBUG] [VALUE] key: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:25.836]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:25.838]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c1ffff91a17b000780000a00000d00"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "requestType": {[0m
+[97m    "requestType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial request"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "sNssa": {[0m
+[97m    "sst": {[0m
+[97m      "value": "0x01"[0m
+[97m    },[0m
+[97m    "sd": {[0m
+[97m      "value": "0x010203"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "dnn": {[0m
+[97m    "data": "08696e7465726e6574"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 103,[0m
+[97m    "name": "UL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:25.838]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:23:25.839]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x6969f294",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:25.839]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e026969f294027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:23:25.839]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:25.839] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:26.026] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:23:26.026]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x9abcb735",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:26.027]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e029abcb735027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:23:26.027]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-20 02:23:26.027]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:23:26.027]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:23:26.027]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-20 02:23:26.028]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:23:26.028]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-20 02:23:26.028]       [DEBUG] [VALUE] message: 027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:23:26.028]       [DEBUG] [VALUE] key: d78117d53a0329970809d9540f8a6b54[0m
+[97m[2020-11-20 02:23:26.029]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:26.029]     [DEBUG] [VALUE] computed mac: 0x9abcb735[0m
+[97m[2020-11-20 02:23:26.029]     [DEBUG] [VALUE] mac received in message: 0x9abcb735[0m
+[97m[2020-11-20 02:23:26.029]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-20 02:23:26.030]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:26.030]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:26.031]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e6574"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 104,[0m
+[97m    "name": "DL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:23:26.031]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00012204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:23:26.036]   [FUNC_IN] Handling: PDU Session Establishment Accept[0m
+[93;1m[2020-11-20 02:23:26.036]     [WARNING] [PROC] SM cause received in PduSessionEstablishmentAccept: PDU session type IPv4 only allowed[0m
+[97m[2020-11-20 02:23:26.036]     [DEBUG] [NAS_TIMER] NAS Timer 3580 stopped[0m
+[97m[2020-11-20 02:23:26.036]     [DEBUG] [PROC] PTI released: Procedure transaction identity value 1[0m
+[97m[2020-11-20 02:23:26.037]     [INFO] [PROC] PDU session established: PDU session identity value 1[0m
+[97m[2020-11-20 02:23:26.037]     [INFO] [UE_APP] IPv4 connection setup with local IP: 60.60.0.1[0m
+[92;1m[2020-11-20 02:23:26.037]     [SUCCESS] [PROCEDURE_RESULT] PDU Session Establishment is successful[0m
+[97m[2020-11-20 02:23:26.038]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:26.038] [FUNC_OUT] [0m
+[97m[2020-11-20 02:23:27.759] [DEBUG] [NAS_TIMER] NAS Timer 3510 stopped[0m
+[97m[2020-11-20 02:23:27.762] [INFO] [NAS_TIMER] NAS Timer expired: NasTimer{timerCode=3510}[0m
+[91;1m[2020-11-20 02:23:29.880] [ERROR] [UE_APP] Ping timeout for google.com (172.217.9.14) after 3 sec no response[0m
+[97m[2020-11-20 02:23:33.760] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3578s[0m
+[97m[2020-11-20 02:23:44.262] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3568s[0m
+[97m[2020-11-20 02:23:54.764] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3557s[0m
+[97m[2020-11-20 02:24:05.266] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3547s[0m
+[97m[2020-11-20 02:24:15.768] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3536s[0m
+[97m[2020-11-20 02:24:26.270] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3526s[0m
+[97m[2020-11-20 02:24:36.771] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3515s[0m
+[97m[2020-11-20 02:24:47.272] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3505s[0m
+[97m[2020-11-20 02:24:57.774] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3494s[0m
+[97m[2020-11-20 02:25:08.275] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3484s[0m
+[97m[2020-11-20 02:25:18.777] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3473s[0m
+[97m[2020-11-20 02:25:29.279] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3463s[0m
+[97m[2020-11-20 02:25:39.780] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3452s[0m
+[97m[2020-11-20 02:25:50.281] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3442s[0m
+[97m[2020-11-20 02:26:00.782] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3431s[0m
+[97m[2020-11-20 02:26:11.283] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3421s[0m
+[97m[2020-11-20 02:26:21.785] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3410s[0m
+[97m[2020-11-20 02:26:32.286] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3400s[0m
+[97m[2020-11-20 02:26:42.787] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3389s[0m
+[97m[2020-11-20 02:26:53.289] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3379s[0m
+[97m[2020-11-20 02:27:03.790] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3368s[0m
+[97m[2020-11-20 02:27:14.291] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3358s[0m
+[97m[2020-11-20 02:27:24.793] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3347s[0m
+[97m[2020-11-20 02:27:35.294] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3337s[0m
+[97m[2020-11-20 02:27:45.796] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3326s[0m
+[97m[2020-11-20 02:27:56.297] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3316s[0m
+[97m[2020-11-20 02:28:06.798] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3305s[0m
+[97m[2020-11-20 02:28:17.299] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3295s[0m
+[97m[2020-11-20 02:28:27.800] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3284s[0m
+[97m[2020-11-20 02:28:38.301] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3274s[0m
+[97m[2020-11-20 02:28:48.803] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3263s[0m
+[97m[2020-11-20 02:28:59.304] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3253s[0m
+[97m[2020-11-20 02:29:09.805] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3242s[0m
+[97m[2020-11-20 02:29:20.306] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3232s[0m
+[97m[2020-11-20 02:29:30.807] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3221s[0m
+[97m[2020-11-20 02:29:41.308] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3211s[0m
+[97m[2020-11-20 02:29:51.809] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3200s[0m
+[97m[2020-11-20 02:30:02.310] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3190s[0m
+[97m[2020-11-20 02:30:12.812] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3179s[0m
+[97m[2020-11-20 02:30:23.313] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3169s[0m
+[97m[2020-11-20 02:30:33.814] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3158s[0m
+[97m[2020-11-20 02:30:44.315] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3148s[0m
+[97m[2020-11-20 02:30:54.816] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3137s[0m
+[97m[2020-11-20 02:31:05.317] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3127s[0m
+[97m[2020-11-20 02:31:15.818] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3116s[0m
+[97m[2020-11-20 02:31:26.319] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3106s[0m
+[97m[2020-11-20 02:31:36.821] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3095s[0m
+[97m[2020-11-20 02:31:47.323] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3085s[0m
+[97m[2020-11-20 02:31:57.824] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3074s[0m
+[97m[2020-11-20 02:32:08.325] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3064s[0m
+[97m[2020-11-20 02:32:18.826] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3053s[0m
+[97m[2020-11-20 02:32:29.328] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3043s[0m
+[97m[2020-11-20 02:32:39.829] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3032s[0m
+[97m[2020-11-20 02:32:50.330] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3022s[0m
+[97m[2020-11-20 02:33:00.831] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3011s[0m
+[97m[2020-11-20 02:33:11.332] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3001s[0m
+[97m[2020-11-20 02:33:21.833] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2990s[0m
+[97m[2020-11-20 02:33:32.334] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2980s[0m
+[97m[2020-11-20 02:33:42.835] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2969s[0m
+[97m[2020-11-20 02:33:53.336] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2959s[0m
+[97m[2020-11-20 02:34:03.837] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2948s[0m
+[97m[2020-11-20 02:34:14.338] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2938s[0m
+[97m[2020-11-20 02:34:24.839] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2927s[0m
+[97m[2020-11-20 02:34:35.340] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2917s[0m
+[97m[2020-11-20 02:34:45.841] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2906s[0m
+[97m[2020-11-20 02:34:56.342] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2896s[0m
+[97m[2020-11-20 02:35:06.843] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2885s[0m
+[97m[2020-11-20 02:35:17.344] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2875s[0m
+[97m[2020-11-20 02:35:27.845] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2864s[0m
+[97m[2020-11-20 02:35:38.346] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2854s[0m
+[97m[2020-11-20 02:35:48.847] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2843s[0m
+[97m[2020-11-20 02:35:59.348] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2833s[0m
+[97m[2020-11-20 02:36:09.849] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2822s[0m
+[97m[2020-11-20 02:36:20.349] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2812s[0m
+[97m[2020-11-20 02:36:30.850] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2801s[0m
+[97m[2020-11-20 02:36:41.351] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2791s[0m
+[97m[2020-11-20 02:36:51.853] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2780s[0m
+[97m[2020-11-20 02:37:02.354] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2770s[0m
+[97m[2020-11-20 02:37:12.855] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2759s[0m
+[97m[2020-11-20 02:37:23.356] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2749s[0m
+[97m[2020-11-20 02:37:33.857] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2738s[0m
+[97m[2020-11-20 02:37:44.358] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2728s[0m
+[97m[2020-11-20 02:37:54.859] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2717s[0m
+[97m[2020-11-20 02:38:05.360] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2707s[0m
+[97m[2020-11-20 02:38:15.861] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2696s[0m
+[97m[2020-11-20 02:38:26.362] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2686s[0m
+[97m[2020-11-20 02:38:36.863] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2675s[0m
+[97m[2020-11-20 02:38:47.365] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2665s[0m
+[97m[2020-11-20 02:38:57.866] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2654s[0m
+[97m[2020-11-20 02:39:08.367] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2644s[0m
+[97m[2020-11-20 02:39:18.868] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2633s[0m
+[97m[2020-11-20 02:39:29.369] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2623s[0m
+[97m[2020-11-20 02:39:39.871] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2612s[0m
+[97m[2020-11-20 02:39:50.372] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2602s[0m
+[97m[2020-11-20 02:40:00.873] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2591s[0m
+[97m[2020-11-20 02:40:11.374] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:2581s[0m
+[97m[2020-11-20 02:41:39.633] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__PLMN_SEARCH[0m
+[97m[2020-11-20 02:41:39.634] [INFO] [STATE] UE switches to state: MM_DEREGISTERED/MM_DEREGISTERED__NORMAL_SERVICE[0m
+[97m[2020-11-20 02:41:45.938] [FUNC_IN] Starting: Registration procedure (initial registration)[0m
+[97m[2020-11-20 02:41:45.939]   [INFO] [STATE] UE switches to state: MM_REGISTERED_INITIATED/MM_REGISTERED_INITIATED__NA[0m
+[97m[2020-11-20 02:41:45.941]   [FUNC_IN] Get or Generate SUCI[0m
+[97m[2020-11-20 02:41:45.943]     [DEBUG] [PROC] T3519 is not running, new SUCI generated.[0m
+[97m[2020-11-20 02:41:45.943]     [DEBUG] [NAS_TIMER] NAS Timer 3519 started with interval: 60s[0m
+[97m[2020-11-20 02:41:45.943]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:45.944]   [DEBUG] [NAS_TIMER] NAS Timer 3510 started with interval: 15s[0m
+[97m[2020-11-20 02:41:45.945]   [FUNC_IN] Sending NAS message: RegistrationRequest[0m
+[97m[2020-11-20 02:41:45.976]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:45.977]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:41:45.978]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "registrationType": {[0m
+[97m    "followOnRequestPending": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "Follow-on request pending"[0m
+[97m    },[0m
+[97m    "registrationType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial registration"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "nasKeySetIdentifier": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 7[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "routingIndicator": "0000",[0m
+[97m    "protectionSchemaId": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Null scheme"[0m
+[97m    },[0m
+[97m    "homeNetworkPublicKeyIdentifier": {[0m
+[97m      "value": "0x00"[0m
+[97m    },[0m
+[97m    "schemeOutput": "0000000003"[0m
+[97m  },[0m
+[97m  "ueSecurityCapability": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "mmCapability": {[0m
+[97m    "s1Mode": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "S1 mode not supported"[0m
+[97m    },[0m
+[97m    "hoAttach": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "not supported"[0m
+[97m    },[0m
+[97m    "lpp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "LPP in N1 mode not supported"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "requestedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "updateType": {[0m
+[97m    "smsRequested": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "SMS over NAS supported"[0m
+[97m    },[0m
+[97m    "ngRanRcu": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "NG-RAN radio capability update not needed"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 65,[0m
+[97m    "name": "Registration request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:45.979]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:41:45.979]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:45.980] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.112] [FUNC_IN] Receiving NAS message: AuthenticationRequest[0m
+[97m[2020-11-20 02:41:46.114]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "94b925b0380dfcfb5976304fcd76b2a5"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "a34a3cffbf958000dba75932d8d897c7"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.114]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e0056000200002194b925b0380dfcfb5976304fcd76b2a52010a34a3cffbf958000dba75932d8d897c7[0m
+[97m[2020-11-20 02:41:46.115]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "ngKSI": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "abba": {[0m
+[97m    "contents": "0000"[0m
+[97m  },[0m
+[97m  "authParamRAND": {[0m
+[97m    "value": "94b925b0380dfcfb5976304fcd76b2a5"[0m
+[97m  },[0m
+[97m  "authParamAUTN": {[0m
+[97m    "value": "a34a3cffbf958000dba75932d8d897c7"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 86,[0m
+[97m    "name": "Authentication request"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.115]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e0056000200002194b925b0380dfcfb5976304fcd76b2a52010a34a3cffbf958000dba75932d8d897c7[0m
+[97m[2020-11-20 02:41:46.117]   [FUNC_IN] Handling: 5G AKA Authentication Request[0m
+[93;1m[2020-11-20 02:41:46.118]     [WARNING] [CONFIG] USE_SQN_HACK: true[0m
+[97m[2020-11-20 02:41:46.118]     [DEBUG] [VALUE] received rand: 94b925b0380dfcfb5976304fcd76b2a5[0m
+[97m[2020-11-20 02:41:46.118]     [DEBUG] [VALUE] received autn: a34a3cffbf958000dba75932d8d897c7[0m
+[97m[2020-11-20 02:41:46.156]     [DEBUG] [VALUE] calculated res: f1c0ef3e2181b1b8[0m
+[97m[2020-11-20 02:41:46.156]     [DEBUG] [VALUE] calculated ck: e58bb0acf0d7e2d4d201d3a6c309aa2f[0m
+[97m[2020-11-20 02:41:46.156]     [DEBUG] [VALUE] calculated ik: 281a56ca7bc77bad948369f90218fae1[0m
+[97m[2020-11-20 02:41:46.157]     [DEBUG] [VALUE] calculated milenageAk: b5b98f08b052[0m
+[97m[2020-11-20 02:41:46.157]     [DEBUG] [VALUE] calculated milenageMac: dba75932d8d897c7[0m
+[97m[2020-11-20 02:41:46.157]     [DEBUG] [VALUE] used snn: 5G:mnc093.mcc208.3gppnetwork.org[0m
+[97m[2020-11-20 02:41:46.157]     [DEBUG] [VALUE] used sqn: 16f3b3f70fc7[0m
+[97m[2020-11-20 02:41:46.158]     [DEBUG] [VALUE] autnCheck: OK[0m
+[97m[2020-11-20 02:41:46.166]     [FUNC_IN] Sending NAS message: AuthenticationResponse[0m
+[97m[2020-11-20 02:41:46.167]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "325c588ced2bc7c9939047e0f0a850af"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.167]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e00572d10325c588ced2bc7c9939047e0f0a850af[0m
+[97m[2020-11-20 02:41:46.167]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "authenticationResponseParameter": {[0m
+[97m    "rawData": "325c588ced2bc7c9939047e0f0a850af"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 87,[0m
+[97m    "name": "Authentication response"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.168]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e00572d10325c588ced2bc7c9939047e0f0a850af[0m
+[97m[2020-11-20 02:41:46.168]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.168]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.169] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.217] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:41:46.218]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 3,[0m
+[97m    "name": "Integrity protected with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x7c18775b",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005d020004f0f0f0f0e1360100",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.218]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e037c18775b007e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-20 02:41:46.220]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "selectedNasSecurityAlgorithms": {[0m
+[97m    "typeOfIntegrityProtectionAlgorithm": {[0m
+[97m      "value": 2,[0m
+[97m      "name": "5G integrity algorithm 128-5G-IA2"[0m
+[97m    },[0m
+[97m    "typeOfCipheringAlgorithm": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "ngKsi": {[0m
+[97m    "tsc": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Native security context (for KSI_AMF)"[0m
+[97m    },[0m
+[97m    "nasKeySetIdentifier": 0[0m
+[97m  },[0m
+[97m  "replayedUeSecurityCapabilities": {[0m
+[97m    "supported_5G_EA0": true,[0m
+[97m    "supported_128_5G_EA1": true,[0m
+[97m    "supported_128_5G_EA2": true,[0m
+[97m    "supported_128_5G_EA3": true,[0m
+[97m    "supported_5G_EA4": false,[0m
+[97m    "supported_5G_EA5": false,[0m
+[97m    "supported_5G_EA6": false,[0m
+[97m    "supported_5G_EA7": false,[0m
+[97m    "supported_5G_IA0": true,[0m
+[97m    "supported_128_5G_IA1": true,[0m
+[97m    "supported_128_5G_IA2": true,[0m
+[97m    "supported_128_5G_IA3": true,[0m
+[97m    "supported_5G_IA4": false,[0m
+[97m    "supported_5G_IA5": false,[0m
+[97m    "supported_5G_IA6": false,[0m
+[97m    "supported_5G_IA7": false,[0m
+[97m    "supported_EEA0": true,[0m
+[97m    "supported_128_EEA1": true,[0m
+[97m    "supported_128_EEA2": true,[0m
+[97m    "supported_128_EEA3": true,[0m
+[97m    "supported_EEA4": false,[0m
+[97m    "supported_EEA5": false,[0m
+[97m    "supported_EEA6": false,[0m
+[97m    "supported_EEA7": false,[0m
+[97m    "supported_EIA0": true,[0m
+[97m    "supported_128_EIA1": true,[0m
+[97m    "supported_128_EIA2": true,[0m
+[97m    "supported_128_EIA3": true,[0m
+[97m    "supported_EIA4": false,[0m
+[97m    "supported_EIA5": false,[0m
+[97m    "supported_EIA6": false,[0m
+[97m    "supported_EIA7": false[0m
+[97m  },[0m
+[97m  "imeiSvRequest": {[0m
+[97m    "imeiSvRequest": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "IMEISV requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "additional5gSecurityInformation": {[0m
+[97m    "hdp": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "K_AMF derivation is not required"[0m
+[97m    },[0m
+[97m    "rinmr": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "Retransmission of the initial NAS message not requested"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "_macForNewSC": "0x7c18775b",[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 93,[0m
+[97m    "name": "Security mode command"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.220]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e005d020004f0f0f0f0e1360100[0m
+[97m[2020-11-20 02:41:46.221]   [FUNC_IN] Handling: Security Mode Command[0m
+[97m[2020-11-20 02:41:46.221]     [DEBUG] [VALUE] kNasEnc: 812f30fc5ce6e39b9202273f61fba90a[0m
+[97m[2020-11-20 02:41:46.222]     [DEBUG] [VALUE] kNasInt: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:41:46.222]     [DEBUG] [VALUE] selectedIntAlg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:41:46.222]     [DEBUG] [VALUE] selectedEncAlg: 5G encryption algorithm 5G-EA0 (null ciphering protection algorithm)[0m
+[97m[2020-11-20 02:41:46.223]     [FUNC_IN] Sending NAS message: SecurityModeComplete[0m
+[97m[2020-11-20 02:41:46.224]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:41:46.225]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:41:46.225]         [DEBUG] [VALUE] count: 0x00000000[0m
+[97m[2020-11-20 02:41:46.225]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:41:46.226]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:41:46.226]         [DEBUG] [VALUE] message: 007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:41:46.226]         [DEBUG] [VALUE] key: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:41:46.322]       [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.323]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "imeiSv": {[0m
+[97m    "imeiSv": "356938035643809"[0m
+[97m  },[0m
+[97m  "nasMessageContainer": {[0m
+[97m    "value": "7e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 94,[0m
+[97m    "name": "Security mode complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.324]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:41:46.324]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 4,[0m
+[97m    "name": "Integrity protected and ciphered with new 5G NAS security context"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x21668f20",[0m
+[97m  "sequenceNumber": "0x00",[0m
+[97m  "plainNasMessage": "7e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.324]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e0421668f20007e005e7700083d653908534683907100267e004179000d0102f8390000000000000000301001002e04f0f0f0f02f050401010203530101[0m
+[97m[2020-11-20 02:41:46.325]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.325]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.325] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.537] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:41:46.538]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x809ec698",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0042010177000b0202f839cafe000000000254070002f839000001150504010102035e010616012c",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.538]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e02809ec698017e0042010177000b0202f839cafe000000000254070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:41:46.538]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-20 02:41:46.539]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:41:46.539]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:41:46.539]       [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-20 02:41:46.539]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:41:46.539]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-20 02:41:46.540]       [DEBUG] [VALUE] message: 017e0042010177000b0202f839cafe000000000254070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:41:46.540]       [DEBUG] [VALUE] key: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:41:46.540]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.541]     [DEBUG] [VALUE] computed mac: 0x809ec698[0m
+[97m[2020-11-20 02:41:46.541]     [DEBUG] [VALUE] mac received in message: 0x809ec698[0m
+[97m[2020-11-20 02:41:46.541]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-20 02:41:46.541]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.543]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.547]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "registrationResult": {[0m
+[97m    "smsOverNasAllowed": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "SMS over NAS not allowed"[0m
+[97m    },[0m
+[97m    "registrationResult": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "3GPP access"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "mobileIdentity": {[0m
+[97m    "mcc": {[0m
+[97m      "value": 208,[0m
+[97m      "name": "France"[0m
+[97m    },[0m
+[97m    "mnc": {[0m
+[97m      "value": 93,[0m
+[97m      "name": "93"[0m
+[97m    },[0m
+[97m    "amfRegionId": "0xca",[0m
+[97m    "amfSetId": {[0m
+[97m      "value": 1016[0m
+[97m    },[0m
+[97m    "amfPointer": 0,[0m
+[97m    "tmsi": {[0m
+[97m      "value": "0x00000002"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "allowedNSSAI": {[0m
+[97m    "sNssais": [[0m
+[97m      {[0m
+[97m        "sst": {[0m
+[97m          "value": "0x01"[0m
+[97m        },[0m
+[97m        "sd": {[0m
+[97m          "value": "0x010203"[0m
+[97m        }[0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "t3512Value": {[0m
+[97m    "timerValue": 6,[0m
+[97m    "unit": {[0m
+[97m      "value": 0,[0m
+[97m      "name": "value is incremented in multiples of 10 minutes"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "t3502Value": {[0m
+[97m    "value": "0x2c"[0m
+[97m  },[0m
+[97m  "taiList": {[0m
+[97m    "partialTrackingAreaIdentityLists": [[0m
+[97m      {[0m
+[97m        "mccMnc": {[0m
+[97m          "mcc": {[0m
+[97m            "value": 208,[0m
+[97m            "name": "France"[0m
+[97m          },[0m
+[97m          "mnc": {[0m
+[97m            "value": 93,[0m
+[97m            "name": "93"[0m
+[97m          }[0m
+[97m        },[0m
+[97m        "tacs": [[0m
+[97m          "0x000001"[0m
+[97m        ][0m
+[97m      }[0m
+[97m    ][0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 66,[0m
+[97m    "name": "Registration accept"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.548]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e0042010177000bf202f839cafe000000000254070002f839000001150504010102035e010616012c[0m
+[97m[2020-11-20 02:41:46.548]   [FUNC_IN] Handling: Registration Accept[0m
+[97m[2020-11-20 02:41:46.549]     [DEBUG] [NAS_TIMER] NAS Timer 3512 started with interval: 3600s[0m
+[97m[2020-11-20 02:41:46.549]     [DEBUG] [NAS_TIMER] NAS Timer 3519 stopped[0m
+[97m[2020-11-20 02:41:46.549]     [FUNC_IN] Sending NAS message: RegistrationComplete[0m
+[97m[2020-11-20 02:41:46.549]       [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:41:46.549]         [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:41:46.550]         [DEBUG] [VALUE] count: 0x00000001[0m
+[97m[2020-11-20 02:41:46.550]         [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:41:46.550]         [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:41:46.550]         [DEBUG] [VALUE] message: 017e0043[0m
+[97m[2020-11-20 02:41:46.550]         [DEBUG] [VALUE] key: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:41:46.551]       [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.551]       [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 67,[0m
+[97m    "name": "Registration complete"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.551]       [DEBUG] [MESSAGING] Plain NAS PDU: 7e0043[0m
+[97m[2020-11-20 02:41:46.552]       [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0x38445018",[0m
+[97m  "sequenceNumber": "0x01",[0m
+[97m  "plainNasMessage": "7e0043",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:41:46.552]       [DEBUG] [MESSAGING] Secured NAS PDU: 7e0238445018017e0043[0m
+[97m[2020-11-20 02:41:46.552]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.552]     [INFO] [STATE] UE switches to state: RM_REGISTERED[0m
+[97m[2020-11-20 02:41:46.552]     [INFO] [STATE] UE switches to state: MM_REGISTERED/MM_REGISTERED__NORMAL_SERVICE[0m
+[92;1m[2020-11-20 02:41:46.552]     [SUCCESS] [PROCEDURE_RESULT] Registration is successful[0m
+[97m[2020-11-20 02:41:46.553]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:46.553] [FUNC_OUT] [0m
+[97m[2020-11-20 02:41:47.133] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:14s[0m
+[97m[2020-11-20 02:41:47.134] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3600s[0m
+[97m[2020-11-20 02:41:57.637] [DEBUG] [NAS_TIMER] NAS Timer 3510 int:15s rem:4s[0m
+[97m[2020-11-20 02:41:57.639] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3589s[0m
+[97m[2020-11-20 02:42:00.939] [FUNC_IN] Sending PDU Session Establishment Request[0m
+[97m[2020-11-20 02:42:00.939]   [DEBUG] [PROC] PDU session allocated: PDU session identity value 1[0m
+[97m[2020-11-20 02:42:00.940]   [DEBUG] [PROC] PTI allocated: Procedure transaction identity value 1[0m
+[97m[2020-11-20 02:42:00.941]   [DEBUG] [NAS_TIMER] NAS Timer 3580 started with interval: 16s[0m
+[97m[2020-11-20 02:42:00.941]   [FUNC_IN] Sending NAS message: UlNasTransport[0m
+[97m[2020-11-20 02:42:00.942]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:42:00.942]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:42:00.942]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-20 02:42:00.942]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:42:00.943]       [DEBUG] [VALUE] direction: 0[0m
+[97m[2020-11-20 02:42:00.943]       [DEBUG] [VALUE] message: 027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:42:00.943]       [DEBUG] [VALUE] key: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:42:00.944]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:00.946]     [DEBUG] [MESSAGING] Plain NAS as JSON: {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c1ffff91a17b000780000a00000d00"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "requestType": {[0m
+[97m    "requestType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "initial request"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "sNssa": {[0m
+[97m    "sst": {[0m
+[97m      "value": "0x01"[0m
+[97m    },[0m
+[97m    "sd": {[0m
+[97m      "value": "0x010203"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "dnn": {[0m
+[97m    "data": "08696e7465726e6574"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 103,[0m
+[97m    "name": "UL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:42:00.946]     [DEBUG] [MESSAGING] Plain NAS PDU: 7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:42:00.946]     [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0xaedca8bf",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:42:00.947]     [DEBUG] [MESSAGING] Secured NAS PDU: 7e02aedca8bf027e00670100122e0101c1ffff91a17b000780000a00000d00120181220401010203250908696e7465726e6574[0m
+[97m[2020-11-20 02:42:00.947]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:00.947] [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.125] [FUNC_IN] Receiving NAS message: SecuredMmMessage[0m
+[97m[2020-11-20 02:42:01.126]   [DEBUG] [MESSAGING] Secured NAS as JSON {[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 2,[0m
+[97m    "name": "Integrity protected and ciphered"[0m
+[97m  },[0m
+[97m  "messageAuthenticationCode": "0xb39fbbaf",[0m
+[97m  "sequenceNumber": "0x02",[0m
+[97m  "plainNasMessage": "7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201",[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:42:01.126]   [DEBUG] [MESSAGING] Secured NAS PDU: 7e02b39fbbaf027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:42:01.126]   [FUNC_IN] NasEncryption.decrypt[0m
+[97m[2020-11-20 02:42:01.126]     [FUNC_IN] Computing Mac[0m
+[97m[2020-11-20 02:42:01.126]       [DEBUG] [VALUE] alg: 5G integrity algorithm 128-5G-IA2[0m
+[97m[2020-11-20 02:42:01.127]       [DEBUG] [VALUE] count: 0x00000002[0m
+[97m[2020-11-20 02:42:01.127]       [DEBUG] [VALUE] bearer: 1[0m
+[97m[2020-11-20 02:42:01.127]       [DEBUG] [VALUE] direction: 1[0m
+[97m[2020-11-20 02:42:01.127]       [DEBUG] [VALUE] message: 027e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:42:01.128]       [DEBUG] [VALUE] key: 1449c780f54e0800e9ef32f06a47f3e5[0m
+[97m[2020-11-20 02:42:01.128]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.128]     [DEBUG] [VALUE] computed mac: 0xb39fbbaf[0m
+[97m[2020-11-20 02:42:01.128]     [DEBUG] [VALUE] mac received in message: 0xb39fbbaf[0m
+[97m[2020-11-20 02:42:01.129]     [FUNC_IN] NasEncryption.decryptData[0m
+[97m[2020-11-20 02:42:01.129]     [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.129]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.130]   [DEBUG] [MESSAGING] Plain NAS as JSON {[0m
+[97m  "payloadContainerType": {[0m
+[97m    "payloadContainerType": {[0m
+[97m      "value": 1,[0m
+[97m      "name": "N1 SM information"[0m
+[97m    }[0m
+[97m  },[0m
+[97m  "payloadContainer": {[0m
+[97m    "payload": "2e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e6574"[0m
+[97m  },[0m
+[97m  "pduSessionId": {[0m
+[97m    "value": "0x01"[0m
+[97m  },[0m
+[97m  "securityHeaderType": {[0m
+[97m    "value": 0,[0m
+[97m    "name": "Plain 5GS NAS message, not security protected"[0m
+[97m  },[0m
+[97m  "messageType": {[0m
+[97m    "value": 104,[0m
+[97m    "name": "DL NAS transport"[0m
+[97m  },[0m
+[97m  "extendedProtocolDiscriminator": {[0m
+[97m    "value": 126,[0m
+[97m    "name": "5GS mobility management messages"[0m
+[97m  }[0m
+[97m}[0m
+[97m[2020-11-20 02:42:01.130]   [DEBUG] [MESSAGING] Plain NAS PDU: 7e00680100452e0101c211000901000631310101ff09060b00010b000259322905013c3c00022204010102037900060920410101097b000880000d0408080808250908696e7465726e65741201[0m
+[97m[2020-11-20 02:42:01.135]   [FUNC_IN] Handling: PDU Session Establishment Accept[0m
+[93;1m[2020-11-20 02:42:01.135]     [WARNING] [PROC] SM cause received in PduSessionEstablishmentAccept: PDU session type IPv4 only allowed[0m
+[97m[2020-11-20 02:42:01.135]     [DEBUG] [NAS_TIMER] NAS Timer 3580 stopped[0m
+[97m[2020-11-20 02:42:01.135]     [DEBUG] [PROC] PTI released: Procedure transaction identity value 1[0m
+[97m[2020-11-20 02:42:01.136]     [INFO] [PROC] PDU session established: PDU session identity value 1[0m
+[92;1m[2020-11-20 02:42:01.136]     [SUCCESS] [PROCEDURE_RESULT] PDU Session Establishment is successful[0m
+[97m[2020-11-20 02:42:01.136]     [INFO] [UE_APP] IPv4 connection setup with local IP: 60.60.0.2[0m
+[97m[2020-11-20 02:42:01.136]   [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:01.136] [FUNC_OUT] [0m
+[97m[2020-11-20 02:42:02.139] [DEBUG] [NAS_TIMER] NAS Timer 3510 stopped[0m
+[97m[2020-11-20 02:42:02.142] [INFO] [NAS_TIMER] NAS Timer expired: NasTimer{timerCode=3510}[0m
+[91;1m[2020-11-20 02:42:05.011] [ERROR] [UE_APP] Ping timeout for google.com (172.217.2.238) after 3 sec no response[0m
+[97m[2020-11-20 02:42:08.142] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3579s[0m
+[97m[2020-11-20 02:42:18.644] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3568s[0m
+[97m[2020-11-20 02:42:29.147] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3558s[0m
+[97m[2020-11-20 02:42:39.648] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3547s[0m
+[97m[2020-11-20 02:42:50.149] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3537s[0m
+[97m[2020-11-20 02:43:00.651] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3526s[0m
+[97m[2020-11-20 02:43:11.152] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3516s[0m
+[97m[2020-11-20 02:43:21.655] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3505s[0m
+[97m[2020-11-20 02:43:32.156] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3495s[0m
+[97m[2020-11-20 02:43:42.658] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3484s[0m
+[97m[2020-11-20 02:43:53.159] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3474s[0m
+[97m[2020-11-20 02:44:03.660] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3463s[0m
+[97m[2020-11-20 02:44:14.161] [DEBUG] [NAS_TIMER] NAS Timer 3512 int:3600s rem:3453s[0m

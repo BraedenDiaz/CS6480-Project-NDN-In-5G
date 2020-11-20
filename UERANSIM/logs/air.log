@@ -1,0 +1,6 @@
+[97m[2020-11-19 23:21:25.078] [INFO] [CONNECTION] TUN Bridge has been started.[0m
+[97m[2020-11-19 23:21:43.188] [INFO] [TUN] IPv4 PDU session established(ue-imsi-208930000000003, 60.60.0.1)[0m
+[97m[2020-11-20 02:23:05.618] [INFO] [CONNECTION] TUN Bridge has been started.[0m
+[97m[2020-11-20 02:23:26.037] [INFO] [TUN] IPv4 PDU session established(ue-imsi-208930000000003, 60.60.0.1)[0m
+[97m[2020-11-20 02:41:38.496] [INFO] [CONNECTION] TUN Bridge has been started.[0m
+[97m[2020-11-20 02:42:01.136] [INFO] [TUN] IPv4 PDU session established(ue-imsi-208930000000003, 60.60.0.2)[0m
