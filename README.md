@@ -10,14 +10,12 @@ Refer to the references at the bottom for links to the free5gc and UERANSIM repo
 
 For my project, I am using the [PowderWireless Platform](https://powderwireless.net) ran by the FLUX research group at the University of Utah but these instructions will work with any other valid setup.
 
-Note: You can also set up multiple connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well.
-
 For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki] (https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
 
 I have added the IP addresses next to the name of the nodes below in my specific setup which you can refer to in the configurations, however, be sure to use the correct addresses for your setup.
 
-- `free5gc (10.10.1.2)` node which will contain free5gc.
-- `sim-ran (10.10.1.1)` node which will contain UERANSIM.
+- `free5gc (10.10.1.2)` node which will contain free5gc, the 5G core.
+- `sim-ran (10.10.1.1)` node which will contain UERANSIM used as the simulated external Radio Accesss Network (RAN/gNB) and User Equipment (UE).
 - `upfb (10.10.1.3)` node which acts as a UPF branching point.
 - `upf1 (10.10.1.4)` node which acts as a UPF anchor.
 - `upf2 (10.10.1.5)` node which acts as another UPF anchor.
