@@ -8,15 +8,13 @@ Refer to the references at the bottom for links to the free5gc and UERANSIM repo
 
 1. Create a network setup with one or more machines running Ubuntu 18 with kernel 5.0.0-23-generic.
 
-For my project, I am using the [PowderWireless Platform](https://powderwireless.net) ran by the FLUX research group at the University of Utah.
+For my project, I am using the [PowderWireless Platform](https://powderwireless.net) ran by the FLUX research group at the University of Utah but these instructions will work with any other valid setup.
 
-Note: You can also set up multiple connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well. Please refer to my example profiles linked below.
-
-[My Example PowderWireless Profiles](/PowderWireless%20Profiles)
+Note: You can also set up multiple connected nodes if you plan on using an external Radio Access Network (RAN) with free5gc as well.
 
 For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki] (https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
 
-I have added the IP addresses of the nodes in my specific setup which you can refer to in the configurations but be sure to use the correct addresses for your setup.
+I have added the IP addresses next to the name of the nodes below in my specific setup which you can refer to in the configurations, however, be sure to use the correct addresses for your setup.
 
 - `free5gc (10.10.1.2)` node which will contain free5gc.
 - `sim-ran (10.10.1.1)` node which will contain UERANSIM.
