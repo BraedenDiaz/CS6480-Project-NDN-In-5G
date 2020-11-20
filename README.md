@@ -14,11 +14,13 @@ Note: You can also set up two connected nodes if you plan on using an external R
 
 For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki] (https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
 
-- `free5gc` node which will contain free5gc.
-- `sim-ran` node which will contain UERANSIM.
-- `upfb` node which acts as a UPF branching point.
-- `upf1` node which acts as a UPF anchor.
-- `upf2` node which acts as another UPF anchor.
+I have added the IP addresses of the nodes in my specific setup which you can refer to in the configurations but be sure to use the correct addresses for your setup.
+
+- `free5gc (10.10.1.2)` node which will contain free5gc.
+- `sim-ran (10.10.1.1)` node which will contain UERANSIM.
+- `upfb (10.10.1.3)` node which acts as a UPF branching point.
+- `upf1 (10.10.1.4)` node which acts as a UPF anchor.
+- `upf2 (10.10.1.5)` node which acts as another UPF anchor.
 
 ## Install free5gc on the `free5gc` node and on all 3 `UPF` nodes
 
@@ -171,7 +173,7 @@ chmod 700 build.sh run.sh
 
 ## Configure free5gc
 
-1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of the free5gc machine `10.10.1.2` in my case.
+1. Open `free5gc/config/amfcfg.conf` and change the `ngapIpList` value located right below the `configuration` section from `127.0.0.1` to the IP of the free5gc machine.
 
 ```yaml
 configuration:
@@ -247,11 +249,11 @@ Anchor UPF 2 `upfcfg.yaml`:
 
 5. Finally, configure `free5gc/config/uerouting.yaml`.
 
-There are already existing UEs, but I add the followng one using the default SUPI that matches the default one added in the free5gc web console when you add a new subscriber.
+The file already has other existing UEs, but I add the followng one where the `AN` value is set to the IP address of the UPF anchor point I want the following UE to use to access the data network. Also where the `SUPI` value also matches the default one added in the free5gc web console when you add a new subscriber (shown below later when running the free5gc webconsole).
 
 ```yaml
   - SUPI: imsi-2089300007487
-    AN: 10.200.200.101
+    AN: 10.10.1.4 # Use UPF anchor 1
     PathList:
       - DestinationIP: 60.60.0.101
         UPF: !!seq
@@ -272,7 +274,7 @@ There are already existing UEs, but I add the followng one using the default SUP
 selected-profile: 'free5gc'
 ```
 
-2. In the file `UERANSIM/config/free5gc/gnb.yaml`, If you're running UERANSIM on another machine, change the `host: 127.0.0.1` to IP address of the interface on the same networ as the free5gc core.
+2. In the file `UERANSIM/config/free5gc/gnb.yaml`, If you're running UERANSIM on another machine, change the `host: 127.0.0.1` to IP address of the interface on the same network as the free5gc core.
 
 ```yaml
 host: 10.10.1.1
@@ -294,7 +296,6 @@ amfConfigs:
     host: 10.10.1.2
     port: 38412
 ```
-NOTE: Use the default port number as shown in the `gnb.yaml` file which should be 38412 as when I changed it, it wouldn't connect to the free5gc core even when I also changed the port number in the AMF configuration as well, so just leave this as port 38412 and only change the AMF port so that it is 38412.
 
 ## Run free5gc and UERANSIM
 
