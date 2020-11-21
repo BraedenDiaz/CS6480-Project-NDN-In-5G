@@ -9,10 +9,10 @@ configuration:
   ReportCaller: false
 
   pfcp:
-    - addr: 127.0.0.1
+    - addr: 10.10.1.5
 
   gtpu:
-    - addr: 127.0.0.1
+    - addr: 10.10.1.5
     # [optional] gtpu.name
     # - name: upf.5gc.nctu.me
     # [optional] gtpu.ifname

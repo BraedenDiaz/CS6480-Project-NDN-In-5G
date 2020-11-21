@@ -8,7 +8,39 @@ ueRoutingInfo:
     PathList:
       - DestinationIP: 60.60.0.101
         UPF: !!seq
-          - UPF
+          - BranchingUPF
+          - AnchorUPF1
+
+      - DestinationIP: 60.60.0.103
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF2
+
+  - SUPI: imsi-2089300007487
+    AN: 10.10.1.4
+    PathList:
+      - DestinationIP: 60.60.0.101
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF1
+
+      - DestinationIP: 60.60.0.103
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF2
+
+  - SUPI: imsi-2089300007486
+    AN: 10.10.1.5
+    PathList:
+      - DestinationIP: 10.0.0.10
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF1
+
+      - DestinationIP: 10.0.0.11
+        UPF: !!seq
+          - BranchingUPF
+          - AnchorUPF2
 
 routeProfile:
   MEC1:
