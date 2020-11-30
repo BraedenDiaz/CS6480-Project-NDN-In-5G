@@ -10,7 +10,7 @@ Refer to the references at the bottom for links to the free5gc and UERANSIM repo
 
 For my project, I am using the [PowderWireless Platform](https://powderwireless.net) ran by the FLUX research group at the University of Utah but these instructions will work with any other valid setup.
 
-For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki] (https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
+For the following instructions, I am using a setup containing the following five nodes. Please refer to example 2 in the [free5gc wiki](https://github.com/free5gc/free5gc/wiki/SMF-Config) to see what the nodes refer to visually.
 
 I have added the IP addresses next to the name of the nodes below in my specific setup which you can refer to in the configurations, however, be sure to use the correct addresses for your setup.
 
@@ -71,7 +71,13 @@ sudo sysctl -w net.ipv4.ip_forward=1
 sudo iptables -A FORWARD -j ACCEPT
 ```
 
-6. Configure NAT to allow UEs connected to access the Internet. The file /var/emulab/boot/controlif contains the name of the internet-facing "control network" device.
+6. Configure NAT to allow UEs connected to access the Internet. 
+
+```bash
+sudo iptables -t nat -A POSTROUTING -o <interface> -j MASQUERADE
+```
+
+Where `<interface>` is the internet-facing interface. In my case, the `<interface>` is in the file /var/emulab/boot/controlif. The file /var/emulab/boot/controlif contains the name of the internet-facing "control network" device. So my command would be:
 
 ```bash
 sudo iptables -t nat -A POSTROUTING -o `cat /var/emulab/boot/controlif` -j MASQUERADE
@@ -89,8 +95,12 @@ sudo systemctl stop ufw
 
 ```bash
 cd ~
-git clone --recursive -b v3.0.4 -j `nproc` https://github.com/free5gc/free5gc.git
+git clone --recursive -b v3.0.4 -j `nproc` https://github.com/ralfkundel/free5gc.git
 ```
+
+NOTE: free5gc v3.0.4 has bug where the gNodeB of the external RAN, UERANSIM, doesn't know a PDU session has been established due to incorrect messages within the free5gc core. However, another GitHub user, ralfkundel, has created a fork of free5gc fixing this issue amongst others such that it works with UERANSIM. Therefore, in the previous command, I am using the forked version of free5gc that is working.
+
+If free5gc is still on v3.0.4, I recommend using the fork. You can also follow [this issue I opened with free5gc](https://github.com/free5gc/free5gc/issues/142) about this bug to see if it's fixed. The creator of the fork, ralfkundel, is also working with them to get his fixes integrated into the newer versions of free5gc.
 
 9. Install all free5gc Golang module dependencies.
 
@@ -282,18 +292,11 @@ host: 10.10.1.1
 
 ```yaml
 amfConfigs:
-  - guami:
-      mcc: 208
-      mnc: 93
-      amfRegionId:
-        hex: '2a'
-      amfSetId:
-        hex: '5580'
-      amfPointer:
-        hex: 'a8'
     host: 10.10.1.2
     port: 38412
 ```
+
+4. [Configure the UERANSIM tunnel interface](https://github.com/aligungr/UERANSIM/wiki/Configuring-the-TUN-interface)
 
 ## Run free5gc and UERANSIM
 
@@ -356,21 +359,13 @@ cd ~/free5gc
 ./run.sh
 ```
 
-3. On the `sim-ran` node, start the UERANSIM.
+3. On the `sim-ran` node, [start the UERANSIM, run the UERANSIM tunnel interface, run applications using the UEs.](https://github.com/aligungr/UERANSIM/wiki/Using-the-TUN-interface)
 
-```bash
-cd ~/UERANSIM
-./run.sh
-```
-
-At this point, you can use the UERANSIM interface to register, deregister, and connect to the data network over the free5gc core. I have yet to figure out how to do other things such as run an application over the UERANSIM or perform other mobile operations. Refer to the next section below.
-
-# Challenges
-
-- Have yet to get an example application running over the UERANSIM and using the free5gc core.
+At this point, you can use the link in the previous step to run applications on the UEs which will go through the free5gc core network to either the Data Network or other UEs depending on what you are doing.
 
 # References
 
 - [PowderWireless Platform](https://powderwireless.net)
 - [free5gc Repository](https://github.com/free5gc/free5gc)
+- [free5gc v3.0.4 fork by ralfkundel](https://github.com/ralfkundel/free5gc)
 - [UERANSIM Repository](https://github.com/aligungr/UERANSIM)
